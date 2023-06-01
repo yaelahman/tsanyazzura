@@ -30,14 +30,41 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title mb-3">Data Settings</h4>
-                <form action="{{ route('settings.update') }}" method="POST">
+                <form action="{{ route('settings.update') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @foreach ($settings as $item)
-                        <div class="form-group">
-                            <label for="">{{ $item->title }}</label>
-                            <input type="text" name="kolom[]" class="form-control" value="{{ $item->text }}">
-                            <input type="hidden" name="id[]" value="{{ $item->id }}">
+                    <input type="hidden" name="type[]" value="{{$item->type}}">
+                    @if($item->type == 'file')
+                    <div class="row">
+                        
+                        <div class="col-sm-6 mt-3">
+                            <div class="form-group mt-3">
+                                <div class="col-md-12">
+                                    <input type="file" id="image" onchange="preview(1)" name="image"
+                                        class="form-control ps-0 form-control-line">
+                                </div>
+                            </div>
                         </div>
+                        <div class="col-sm-6 mt-3">
+                            <div class="btn-group">
+                                <a href="{{ asset('galeri/' . $item->text) }}"
+                                    class="btn btn-info mt-3 lihat-gambar-1" target="_blank"><i
+                                        class="fas fa-eye"></i>&nbsp;Lihat
+                                    Gambar</a>
+                                &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="kolom[]" class="form-control" value="{{ $item->text }}">
+                    @elseif($item->type == 'textarea')
+                    <textarea name="kolom[]" cols="30" rows="10" class="form-control">{{ $item->text }}</textarea>
+                    @else
+                    <div class="form-group">
+                        <label for="">{{ $item->title }}</label>
+                        <input type="text" name="kolom[]" class="form-control" value="{{ $item->text }}">
+                    </div>
+                    @endif
+                        <input type="hidden" name="id[]" value="{{ $item->id }}">
                     @endforeach
                     <button type="submit" class="btn btn-warning w-100 mt-3">Update</button>
                 </form>
@@ -71,5 +98,12 @@
                 }
             })
         });
+
+        
+        function preview(index) {
+            console.log(event.target.files)
+            $('.lihat-gambar-' + index).removeClass('d-none')
+            $('.lihat-gambar-' + index).attr('href', URL.createObjectURL(event.target.files[0]))
+        }
     </script>
 @endsection

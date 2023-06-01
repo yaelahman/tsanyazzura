@@ -29,18 +29,22 @@ Route::get('/artisan', function () {
     Artisan::call('storage:link');
 });
 
-Route::prefix('/adminsssssssss')->group(function () {
+Route::prefix('/admin')->group(function () {
     Auth::routes();
 
     Route::middleware('auth')->group(function () {
         Route::get('/', 'HomeController@index')->name('home');
 
         Route::resource('/category', 'CategoryController');
+        Route::resource('/prodi', 'ProdiController');
 
         Route::post('/product/image', 'ProductController@ImageProduct')->name('product.image');
         Route::resource('/product', 'ProductController');
 
         Route::resource('/banner', 'BannerController');
+        Route::resource('/galeri', 'GaleriController');
+        Route::resource('/tim', 'TimController');
+        Route::resource('/visi-misi', 'VisiMisiController');
 
         Route::get('/profile', 'HomeController@profile')->name('profile.index');
         Route::post('/profile/{profile}', 'HomeController@updateProfile')->name('profile.update');

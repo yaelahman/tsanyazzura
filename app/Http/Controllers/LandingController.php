@@ -53,7 +53,9 @@ class LandingController extends Controller
         $data = [
             'settings' => $settings,
             'detail' => false,
-            'active' => 'visi-misi'
+            'active' => 'visi-misi',
+            'visi_misi' => \App\VisiMisi::all(),
+            'program_kerja' => \App\ProgramKerja::all()
         ];
 
         return view('home.visi_misi', $data);

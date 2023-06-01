@@ -5,13 +5,9 @@
       <div class="row align-items-center">
         <div class="col-lg-6 col-md-12 col-12">
           <div class="header-content">
-            <h1>Tsany Azzura.</h1>
+            <h1>{{ $settings['title'] }}.</h1>
             <p>
-              Halo Kawan-kawan! Selamat datang di Situs Web pribadi saya, kalian dapat menelisik Rekam Jejak maupun
-              Opini saya dalam berbagai topik berskala Daerah, Nasional, maupun Internasional. Saya percaya, Pemuda
-              adalah aset suatu bangsa. Namun apabila kita hanya bisa mengutuk Status Quo, ataupun bergerak
-              sendiri-sendiri, harapan kemajuan hanyalah suatu Utopia. Maka, dalam rangka menyongsong Indonesia emas,
-              Mari kita Peduli dan Berkolaborasi
+              {{ $settings['deskripsi'] }}
             </p>
             <div class="button">
               <a href="javascript:void(0)" class="btn primary-btn">Pantau Aspirasi</a>
@@ -20,7 +16,7 @@
         </div>
         <div class="col-lg-6 col-md-12 col-12">
           <div class="header-image">
-            <img src="assets/images/header/hero-image.jpg" alt="#" />
+            <img src="{{ asset('galeri/' . $settings['foto_utama']) }}" alt="#" />
           </div>
         </div>
       </div>

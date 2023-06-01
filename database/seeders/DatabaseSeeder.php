@@ -21,52 +21,11 @@ class DatabaseSeeder extends Seeder
             'role' => 1
         ]);
 
-        DB::table('settings')->insert([
-            'name' => 'background',
-            'title' => 'Background',
-            'text' => 'https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm309-adj-01.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=2204002a48c0d2dc60c1a27a4cc4fd97'
-        ]);
 
         DB::table('settings')->insert([
-            'name' => 'color_primary',
-            'title' => 'Warna Primer',
-            'text' => '#08044C'
-        ]);
-
-        DB::table('settings')->insert([
-            'name' => 'color_secondary',
-            'title' => 'Warna Sekunder',
-            'text' => '#F78009'
-        ]);
-
-        DB::table('settings')->insert([
-            'name' => 'judul',
-            'title' => 'Judul',
-            'text' => 'PASAR NUSANTARA'
-        ]);
-
-        DB::table('settings')->insert([
-            'name' => 'sub_judul',
-            'title' => 'Sub Judul',
-            'text' => 'SOLUSI MASALAH ANDA'
-        ]);
-
-        DB::table('settings')->insert([
-            'name' => 'open_order',
-            'title' => 'Keterangan Jam Kerja',
-            'text' => 'Buka Senin - Jumat Jam 09.00 - 17.30 , Sabtu jam 09.00 - 14.00 . Minggu & Hari Besar Tutup'
-        ]);
-
-        DB::table('settings')->insert([
-            'name' => 'text_marquee',
-            'title' => 'Keterangan Bergerak',
-            'text' => 'SELAMAT DATANG DI PASAR NUSANTARA | SELAMAT BERBELANJA'
-        ]);
-
-        DB::table('settings')->insert([
-            'name' => 'navbar_kanan',
-            'title' => 'Keterangan Navbar Kanan',
-            'text' => 'Selamat berbelanja, Shopper!'
+            'name' => 'title',
+            'title' => 'Title',
+            'text' => 'Tsany Azzura'
         ]);
 
         DB::table('settings')->insert([
@@ -88,9 +47,17 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('settings')->insert([
-            'name' => 'footer',
-            'title' => 'Footer',
-            'text' => 'Dibuat Oleh Pasar Nusantara'
+            'name' => 'foto_utama',
+            'title' => 'Foto Utama',
+            'text' => 'img',
+            'type' => 'file'
+        ]);
+
+        DB::table('settings')->insert([
+            'name' => 'deskripsi',
+            'title' => 'Deskripsi',
+            'text' => 'img',
+            'type' => 'textarea'
         ]);
     }
 }
