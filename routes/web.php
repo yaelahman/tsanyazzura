@@ -30,7 +30,7 @@ Route::get('/artisan', function () {
 });
 
 Route::prefix('/admin')->group(function () {
-    Auth::routes();
+    Auth::routes(['register' => false]);
 
     Route::middleware('auth')->group(function () {
         Route::get('/', 'HomeController@index')->name('home');
@@ -44,6 +44,7 @@ Route::prefix('/admin')->group(function () {
         Route::resource('/banner', 'BannerController');
         Route::resource('/galeri', 'GaleriController');
         Route::resource('/tim', 'TimController');
+        Route::post('/tim/status/{id}', 'TimController@status');
         Route::resource('/visi-misi', 'VisiMisiController');
 
         Route::get('/profile', 'HomeController@profile')->name('profile.index');

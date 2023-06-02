@@ -18,66 +18,27 @@
     <!--======  End Section Title Five ======-->
     <div class="container">
         <div class="row">
+            @foreach($galeri as $row)
+            
             <div class="col-lg-4 col-md-6 col-12">
                 <!-- Single News -->
                 <div class="single-news">
                     <div class="image">
-                        <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/1.jpg"
+                        <a href="javascript:void(0)"><img class="thumb" src="{{ asset('galeri/' . $row->image) }}"
                                 alt="Blog" /></a>
                     </div>
                     <div class="content-body">
                         <h4 class="title">
-                            <a href="javascript:void(0)"> Make your team a Design driven company </a>
+                            <a href="javascript:void(0)"> {{$row->title}} </a>
                         </h4>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the industry's
-                            standard.
+                            {{$row->text}}
                         </p>
                     </div>
                 </div>
                 <!-- End Single News -->
             </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Single News -->
-                <div class="single-news">
-                    <div class="image">
-                        <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/1.jpg"
-                                alt="Blog" /></a>
-                    </div>
-                    <div class="content-body">
-                        <h4 class="title">
-                            <a href="javascript:void(0)"> Make your team a Design driven company </a>
-                        </h4>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the industry's
-                            standard.
-                        </p>
-                    </div>
-                </div>
-                <!-- End Single News -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-12">
-                <!-- Single News -->
-                <div class="single-news">
-                    <div class="image">
-                        <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/1.jpg"
-                                alt="Blog" /></a>
-                    </div>
-                    <div class="content-body">
-                        <h4 class="title">
-                            <a href="javascript:void(0)"> Make your team a Design driven company </a>
-                        </h4>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the industry's
-                            standard.
-                        </p>
-                    </div>
-                </div>
-                <!-- End Single News -->
-            </div>
+            @endforeach
 
         </div>
     </div>

@@ -17,89 +17,49 @@
     </div>
     <!--======  End Section Title Five ======-->
     <div class="container">
+        @if($kepala)
         <div class="row">
             <div class="offset-lg-4 col-lg-4 col-md-4 col-12 px-5 px-sm-2 mb-4 mb-4">
                 <!-- Single News -->
                 <div class="single-news">
                     <div class="image">
-                        <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/1.jpg"
+                        <a href="javascript:void(0)"><img class="thumb" src="{{ asset('galeri/' . $kepala->image) }}"
                                 alt="Blog" /></a>
                     </div>
                     <div class="content-body">
                         <h4 class="title">
-                            <a href="javascript:void(0)"> Make your team a Design driven company </a>
+                            <a href="javascript:void(0)"> {{$kepala->name}}</a>
                         </h4>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the industry's
-                            standard.
+                            {{$kepala->jabatan}}
                         </p>
                     </div>
                 </div>
                 <!-- End Single News -->
             </div>
         </div>
+        @endif
         <div class="row">
+            @foreach($tim as $row)
             <div class="col-lg-3 col-md-4 col-12 px-5 px-sm-2 mb-4">
                 <!-- Single News -->
                 <div class="single-news">
                     <div class="image">
-                        <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/1.jpg"
+                        <a href="javascript:void(0)"><img class="thumb" src="{{ asset('galeri/' . $row->image) }}"
                                 alt="Blog" /></a>
                     </div>
                     <div class="content-body">
                         <h4 class="title">
-                            <a href="javascript:void(0)"> Make your team a Design driven company </a>
+                            <a href="javascript:void(0)"> {{$row->name}} </a>
                         </h4>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the industry's
-                            standard.
+                            {{$row->jabatan}}
                         </p>
                     </div>
                 </div>
                 <!-- End Single News -->
             </div>
-            <div class="col-lg-3 col-md-4 col-12 px-5 px-sm-2 mb-4">
-                <!-- Single News -->
-                <div class="single-news">
-                    <div class="image">
-                        <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/1.jpg"
-                                alt="Blog" /></a>
-                    </div>
-                    <div class="content-body">
-                        <h4 class="title">
-                            <a href="javascript:void(0)"> Make your team a Design driven company </a>
-                        </h4>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the industry's
-                            standard.
-                        </p>
-                    </div>
-                </div>
-                <!-- End Single News -->
-            </div>
-            <div class="col-lg-3 col-md-4 col-12 px-5 px-sm-2 mb-4">
-                <!-- Single News -->
-                <div class="single-news">
-                    <div class="image">
-                        <a href="javascript:void(0)"><img class="thumb" src="assets/images/blog/1.jpg"
-                                alt="Blog" /></a>
-                    </div>
-                    <div class="content-body">
-                        <h4 class="title">
-                            <a href="javascript:void(0)"> Make your team a Design driven company </a>
-                        </h4>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the industry's
-                            standard.
-                        </p>
-                    </div>
-                </div>
-                <!-- End Single News -->
-            </div>
+            @endforeach
 
         </div>
     </div>

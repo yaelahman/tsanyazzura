@@ -45,6 +45,7 @@
                                 <th class="border-top-0" width="10%">Image Tim</th>
                                 <th class="border-top-0">Nama</th>
                                 <th class="border-top-0">Jabatan</th>
+                                <th class="border-top-0">Kepala?</th>
                                 <th class="border-top-0">Action</th>
                             </tr>
                         </thead>
@@ -60,6 +61,12 @@
                                     </td>
                                     <td>{{ $row->name }}</td>
                                     <td>{{ $row->jabatan }}</td>
+                                    <td>
+                                        <button class="button-status btn btn-sm btn-{{ $row->is_utama ? 'success' : 'danger' }} btn-sm btn-flat mr-2"
+                                            data-id="{{ $row->id }}" style="color: white">
+                                             {{ $row->is_utama ? 'Ya' : 'Tidak' }}
+                                        </button>
+                                    </td>
                                     <td>
                                         <a href="{{ route('tim.edit', ['tim' => $row->id]) }}"
                                             class="btn btn-warning btn-sm btn-flat mr-2"><i class="fas fa-pencil-alt"></i>
@@ -83,6 +90,9 @@
         @csrf
         @method('delete')
     </form>
+    <form id="form-status" action="" method="post" class="d-none">
+        @csrf
+    </form>
     </div>
 @endsection
 @section('script')
@@ -105,6 +115,30 @@
                     Swal.fire(
                         'Deleted!',
                         'Your file has been deleted.',
+                        'success'
+                    )
+                    form.submit()
+                }
+            })
+        });
+        $('.button-status').click(function() {
+            var id = $(this).attr('data-id');
+            var form = $('#form-status');
+            form.attr('action', "{{ url('/admin/tim/status') }}/" + id);
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "Change status!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'Updated!',
+                        'Status updated.',
                         'success'
                     )
                     form.submit()

@@ -164,4 +164,19 @@ class TimController extends Controller
             return redirect()->to(route('tim.index'));
         }
     }
+    public function status(Request $request, $id)
+    {    
+
+        Tim::whereNotNull('id')->update([
+            'is_utama' => false
+        ]);
+        $tim = Tim::find($id);
+        $tim->is_utama = true;
+
+        if ($tim->save()) {
+            $request->session()->flash('alert', 'success');
+            $request->session()->flash('message', 'Tim deleted successfully');
+            return redirect()->to(route('tim.index'));
+        }
+    }
 }

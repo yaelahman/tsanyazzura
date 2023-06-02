@@ -88,7 +88,8 @@ class LandingController extends Controller
         $data = [
             'settings' => $settings,
             'detail' => false,
-            'active' => 'warta'
+            'active' => 'warta',
+            'galeri' => \App\Galeri::all()
         ];
 
         return view('home.warta', $data);
@@ -104,7 +105,9 @@ class LandingController extends Controller
         $data = [
             'settings' => $settings,
             'detail' => false,
-            'active' => 'tim'
+            'active' => 'tim',
+            'tim' => \App\Tim::where('is_utama', false)->get(),
+            'kepala' => \App\Tim::where('is_utama', true)->first(),
         ];
 
         return view('home.tim', $data);

@@ -41,6 +41,12 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('settings')->insert([
+            'name' => 'linkedin',
+            'title' => 'Link Linkedin',
+            'text' => 'https://www.linkedin.com/'
+        ]);
+
+        DB::table('settings')->insert([
             'name' => 'whatsapp',
             'title' => 'No WhatsApp',
             'text' => '085702202129'

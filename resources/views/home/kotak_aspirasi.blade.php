@@ -5,14 +5,12 @@
         <h3 class="text-center text-primary mb-5">Kotak Aspirasi</h3>
         <div class="mb-5">
             <div class="light-rounded-buttons">
-                <a href="javascript:void(0)" data-backdrop="static" data-toggle="modal" data-target="#exampleModal"
-                    class="btn primary-btn-outline text-sm">+ Aspirasi</a>
+                <a href="javascript:void(0)" data-backdrop="static" data-toggle="modal" data-target="#exampleModal" class="btn primary-btn-outline text-sm">+ Aspirasi</a>
             </div>
         </div>
 
         <!-- Modal -->
-        <div class="modal fade border-primary" id="exampleModal" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade border-primary" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -38,8 +36,7 @@
                             </div>
                             <div class="form-group mb-2">
                                 <label for="">Angkatan</label>
-                                <input type="text" placeholder="Angkatan" name="angkatan" class="form-control"
-                                    required>
+                                <input type="text" placeholder="Angkatan" name="angkatan" class="form-control" required>
                             </div>
                             <div class="form-group mb-2">
                                 <label for="">Lingkup Aspirasi</label>
@@ -76,8 +73,7 @@
                             </div>
                             <div class="form-group mb-2">
                                 <label for="">Pesan</label>
-                                <textarea name="pesan" id="pesan" cols="30" rows="10" class="form-control" required
-                                    placeholder="Pesan Aspirasi"></textarea>
+                                <textarea name="pesan" id="pesan" cols="30" rows="10" class="form-control" required placeholder="Pesan Aspirasi"></textarea>
                             </div>
                             <div class="form-group mb-2">
                                 <label for="">Lampiran <small class="text-small text-danger">*Jika ada</small>
@@ -90,8 +86,7 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" style="font-size: 12px !important;"
-                            data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" style="font-size: 12px !important;" data-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-primary" style="font-size: 12px !important;">Save
                             changes</button>
                     </div>
