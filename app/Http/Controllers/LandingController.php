@@ -72,7 +72,8 @@ class LandingController extends Controller
             'settings' => $settings,
             'detail' => false,
             'active' => 'kotak-aspirasi',
-            'aspirasi' => \App\Aspirasi::all()
+            'aspirasi' => \App\Aspirasi::all(),
+            'prodi' => \App\Prodi::all(),
         ];
 
         return view('home.kotak_aspirasi', $data);
@@ -112,6 +113,40 @@ class LandingController extends Controller
         ];
 
         return view('home.tim', $data);
+    }
+
+    public function lapak(Request $request)
+    {
+        $settings = [];
+        foreach (Settings::all() as $set) {
+            $settings[$set->name] = $set->text;
+        }
+
+        $data = [
+            'settings' => $settings,
+            'detail' => false,
+            'active' => 'lapak',
+            'products' => \App\Product::all(),
+        ];
+
+        return view('home.lapak', $data);
+    }
+
+    public function lapakDetail(Request $request, $id)
+    {
+        $settings = [];
+        foreach (Settings::all() as $set) {
+            $settings[$set->name] = $set->text;
+        }
+
+        $data = [
+            'settings' => $settings,
+            'detail' => false,
+            'active' => 'lapak',
+            'product' => \App\Product::find($id),
+        ];
+
+        return view('home.lapak_detail', $data);
     }
 
     public function detail(Request $request, $id)

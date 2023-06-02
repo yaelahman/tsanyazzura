@@ -15,6 +15,7 @@ class AspirasiController extends Controller
         try {
             $aspirasi = new Aspirasi();
             $aspirasi->id_prodi = $request->prodi;
+            $aspirasi->jenis = $request->jenis;
             $aspirasi->nama = $request->nama;
             $aspirasi->nim = $request->nim;
             $aspirasi->email = $request->email;
@@ -38,6 +39,7 @@ class AspirasiController extends Controller
             return redirect()->back();
         } catch (\Exception $err) {
             DB::rollBack();
+            throw $err;
 
             return redirect()->back();
         }

@@ -46,7 +46,7 @@ class ProdiController extends Controller
         try {
             $prodi = new Prodi();
             $prodi->name = $request->name;
-            $prodi->status = 1;
+            // $prodi->status = 1;
 
             if ($prodi->save()) {
                 $request->session()->flash('alert', 'success');
@@ -102,7 +102,7 @@ class ProdiController extends Controller
         try {
             $prodi = Prodi::find($id);
             $prodi->name = $request->name;
-            $prodi->status = 1;
+            // $prodi->status = 1;
 
             if ($prodi->save()) {
                 $request->session()->flash('alert', 'success');

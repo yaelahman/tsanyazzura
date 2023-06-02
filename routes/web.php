@@ -22,6 +22,8 @@ Route::get('/kotak-aspirasi', 'LandingController@kotakAspirasi')->name('landing.
 Route::post('/kotak-aspirasi', 'AspirasiController@store')->name('landing.kotak_aspirasi.store');
 Route::get('/warta', 'LandingController@warta')->name('landing.warta');
 Route::get('/tim', 'LandingController@tim')->name('landing.tim');
+Route::get('/lapak', 'LandingController@lapak')->name('landing.lapak');
+Route::get('/lapak/{id}', 'LandingController@lapakDetail')->name('landing.lapak_detail');
 
 Route::get('/faq', 'LandingController@faq')->name('landing.faq');
 Route::get('/detail/{id}', 'LandingController@detail');

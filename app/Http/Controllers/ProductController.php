@@ -59,7 +59,7 @@ class ProductController extends Controller
         try {
             $product = new Product();
             $product->id_users = Auth::user()->id;
-            $product->id_category = $request->id_category;
+            $product->id_category = 1;
             $product->name = $request->name;
             $product->description = $request->description;
             $product->whatsapp = $request->whatsapp;
@@ -146,7 +146,7 @@ class ProductController extends Controller
         DB::beginTransaction();
         try {
             $product = Product::find($id);
-            $product->id_category = $request->id_category;
+            $product->id_category = 1;
             $product->name = $request->name;
             $product->description = $request->description;
             $product->whatsapp = $request->whatsapp;

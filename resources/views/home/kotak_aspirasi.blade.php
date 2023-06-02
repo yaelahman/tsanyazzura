@@ -13,13 +13,20 @@
         <div class="modal fade border-primary" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <form action="{{ route('landing.kotak_aspirasi.store') }}" method="post">
-                    @csrf 
+                    @csrf
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Tambah Aspirasi</h5>
                         </div>
                         <div class="modal-body">
                             <form action="" method="post">
+                                <div class="form-group mb-2">
+                                    <label for="">Jenis</label>
+                                    <select name="jenis" id="jenis" class="form-control" required>
+                                        <option value="0">ASKARAJAYA</option>
+                                        <option value="1">ASKARTIO</option>
+                                    </select>
+                                </div>
                                 <div class="form-group mb-2">
                                     <label for="">Nama</label>
                                     <input type="text" placeholder="Nama" name="nama" class="form-control" required>
@@ -34,7 +41,11 @@
                                 </div>
                                 <div class="form-group mb-2">
                                     <label for="">Prodi</label>
-                                    <input type="text" placeholder="Prodi" name="prodi" class="form-control" required>
+                                    <select name="prodi" id="prodi" class="form-control" required>
+                                        @foreach($prodi as $row)
+                                        <option value="{{ $row->id }}">{{ $row->name }}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group mb-2">
                                     <label for="">Angkatan</label>
@@ -89,7 +100,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" style="font-size: 12px !important;" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" style="font-size: 12px !important;">Save
+                            <button type="submit" class="btn btn-primary" style="font-size: 12px !important;">Save
                                 changes</button>
                         </div>
                     </div>
@@ -97,27 +108,35 @@
             </div>
         </div>
         <div class="row mb-4">
-            @foreach($aspirasi as $row) 
+            @foreach($aspirasi as $row)
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header bg-primary">
                         <div class="d-flex">
-                            <img src="" alt="" class="img-thumbnail">
+                            <img src="" alt="OKE" class="img-thumbnail">
                             <div class="ms-2">
-                                <h6 class="text-white text-sm">Nama</h6>
-                                <h6 class="text-white text-xs">*****</h6>
+                                <h6 class="text-white text-sm">{{$row->nama}}</h6>
+                                <h6 class="text-white text-xs">{{ $row->jenis == 0 ? 'Askarajaya' : 'Askartio' }}</h6>
                             </div>
                         </div>
                     </div>
                     <div class="card-body">
                         <h6>
-                            Aspirasi
+                            {{$row->pesan}}
                         </h6>
                     </div>
-                    <div class="card-footer">
-                        <p class="text-muted text-sm">
-                            08-10-2002 17.12
-                        </p>
+                    <div class="card-footer d-flex justify-content-between">
+                        <small class="text-muted text-sm my-auto">
+                            {{ date('d/m/Y H:i', strtotime($row->created_at)) }}
+                        </small>
+                        <div class="btn-group">
+                            @if($row->balasan != null)
+                            <button class="btn btn-sm btn-primary py-1 px-1" style="font-size: 10px">Balasan</button>
+                            @endif
+                            @if($row->lampiran != null)
+                            <a href="{{ asset('galeri/' . $row->lampiran) }}" target="_blank" class="btn btn-sm btn-secondary py-1 px-1" style="font-size: 10px">Lampiran</a>
+                            @endif
+                        </div>
                     </div>
                 </div>
             </div>

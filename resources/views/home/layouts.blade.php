@@ -26,7 +26,7 @@
     <!--====== gLightBox css ======-->
     <link rel="stylesheet" href="{{ asset('assets') }}/css/glightbox.min.css" />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{ asset('') }}/style.css" />
 </head>
 
 <body>
@@ -42,9 +42,7 @@
                             <!-- <img src="assets/images/white-logo.svg" alt="Logo" /> -->
                             <h3 class="text-white">TA</h3>
                         </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNine" aria-controls="navbarNine" aria-expanded="false"
-                            aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine" aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="toggler-icon"></span>
                             <span class="toggler-icon"></span>
                             <span class="toggler-icon"></span>
@@ -161,23 +159,16 @@
     <script src="{{ asset('assets') }}/js/glightbox.min.js"></script>
     <script src="{{ asset('assets') }}/js/main.js"></script>
     <script src="{{ asset('assets') }}/js/tiny-slider.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script>
-
         //===== close navbar-collapse when a  clicked
         let navbarTogglerNine = document.querySelector(
             ".navbar-nine .navbar-toggler"
         );
-        navbarTogglerNine.addEventListener("click", function () {
+        navbarTogglerNine.addEventListener("click", function() {
             navbarTogglerNine.classList.toggle("active");
         });
 
@@ -186,11 +177,11 @@
         let overlayLeft = document.querySelector(".overlay-left");
         let sidebarClose = document.querySelector(".sidebar-close .close");
 
-        overlayLeft.addEventListener("click", function () {
+        overlayLeft.addEventListener("click", function() {
             sidebarLeft.classList.toggle("open");
             overlayLeft.classList.toggle("open");
         });
-        sidebarClose.addEventListener("click", function () {
+        sidebarClose.addEventListener("click", function() {
             sidebarLeft.classList.remove("open");
             overlayLeft.classList.remove("open");
         });
@@ -198,7 +189,7 @@
         // ===== navbar nine sideMenu
         let sideMenuLeftNine = document.querySelector(".navbar-nine .menu-bar");
 
-        sideMenuLeftNine.addEventListener("click", function () {
+        sideMenuLeftNine.addEventListener("click", function() {
             sidebarLeft.classList.add("open");
             overlayLeft.classList.add("open");
         });
@@ -211,8 +202,8 @@
             'width': 900,
             'autoplayVideos': true,
         });
-
     </script>
+    @yield('script')
 </body>
 
 </html>

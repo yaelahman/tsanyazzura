@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('lingkup_aspirasi');
             $table->string('sasaran_aspirasi');
             $table->string('pesan');
-            $table->string('lampiran');
+            $table->string('lampiran')->nullable();
             $table->timestamps();
         });
     }
