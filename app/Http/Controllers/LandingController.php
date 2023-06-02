@@ -71,7 +71,8 @@ class LandingController extends Controller
         $data = [
             'settings' => $settings,
             'detail' => false,
-            'active' => 'kotak-aspirasi'
+            'active' => 'kotak-aspirasi',
+            'aspirasi' => \App\Aspirasi::all()
         ];
 
         return view('home.kotak_aspirasi', $data);
