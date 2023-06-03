@@ -21,16 +21,15 @@
         <div class="row">
             <div class="offset-lg-4 col-lg-4 col-md-4 col-12 px-5 px-sm-2 mb-4 mb-4">
                 <!-- Single News -->
-                <div class="single-news">
+                <div class="single-news border">
                     <div class="image">
-                        <a href="javascript:void(0)"><img class="thumb" src="{{ asset('galeri/' . $kepala->image) }}"
-                                alt="Blog" /></a>
+                        <a href="javascript:void(0)"><img class="thumb" src="{{ asset('galeri/' . $kepala->image) }}" alt="Blog" /></a>
                     </div>
                     <div class="content-body">
-                        <h4 class="title">
-                            <a href="javascript:void(0)"> {{$kepala->name}}</a>
+                        <h4 class="title text-center mb-0 mt-1">
+                            <a href="javascript:void(0)"> {{$kepala->name}} </a>
                         </h4>
-                        <p>
+                        <p class="text-center mb-2">
                             {{$kepala->jabatan}}
                         </p>
                     </div>
@@ -43,16 +42,15 @@
             @foreach($tim as $row)
             <div class="col-lg-3 col-md-4 col-12 px-5 px-sm-2 mb-4">
                 <!-- Single News -->
-                <div class="single-news">
+                <div class="single-news border">
                     <div class="image">
-                        <a href="javascript:void(0)"><img class="thumb" src="{{ asset('galeri/' . $row->image) }}"
-                                alt="Blog" /></a>
+                        <a href="javascript:void(0)"><img class="thumb" src="{{ asset('galeri/' . $row->image) }}" alt="Blog" /></a>
                     </div>
                     <div class="content-body">
-                        <h4 class="title">
+                        <h4 class="title text-center mb-0 mt-1">
                             <a href="javascript:void(0)"> {{$row->name}} </a>
                         </h4>
-                        <p>
+                        <p class="text-center mb-2">
                             {{$row->jabatan}}
                         </p>
                     </div>

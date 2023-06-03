@@ -41,8 +41,8 @@
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg">
                         <a class="navbar-brand" href="index.html">
-                            <!-- <img src="assets/images/white-logo.svg" alt="Logo" /> -->
-                            <h3 class="text-white">TA</h3>
+                            <img src="{{ asset('galeri/' . $settings['logo']) }}" alt="Logo" />
+                            <!-- <h3 class="text-white">TA</h3> -->
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine" aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="toggler-icon"></span>
@@ -145,9 +145,27 @@
 
     @yield('content')
     <!-- Start Footer Area -->
-    <footer class="text-white" style="background-color: var(--primary)">
-        <div class="py-3 text-center">
-            Copyright | {{$settings['title']}}
+    <footer class="text-white py-3" style="background-color: var(--primary)">
+        <div class="d-flex align-items-center justify-content-center">
+            <h5 class="social-title text-white">Follow Us On</h5>
+        </div>
+        <ul class="d-flex justify-content-center">
+            <li>
+                <a href="{{ $settings['facebook'] }}"><i class="text-white mx-2 lni lni-facebook-filled"></i></a>
+            </li>
+            <li>
+                <a href="{{ $settings['instagram'] }}"><i class="text-white mx-2 lni lni-instagram-original"></i></a>
+            </li>
+            <li>
+                <a href="{{ $settings['linkedin'] }}"><i class="text-white mx-2 lni lni-linkedin-original"></i></a>
+            </li>
+            <li>
+                <a href="https://wa.me/62{{ $settings['whatsapp'] }}"><i class="text-white mx-2 lni lni-whatsapp"></i></a>
+            </li>
+        </ul>
+
+        <div class="pt-3 text-center">
+            Copyright © 2023 {{$settings['title']}}
         </div>
     </footer>
     <!--/ End Footer Area -->

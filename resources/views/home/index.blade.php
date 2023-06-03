@@ -10,7 +10,7 @@
             {!! $settings['deskripsi'] ?? '' !!}
           </p>
           <div class="button">
-            <a href="javascript:void(0)" class="btn primary-btn">Pantau Aspirasi</a>
+            <a href="{{ url('kotak-aspirasi') }}" class="btn primary-btn">Pantau Aspirasi</a>
           </div>
         </div>
       </div>
