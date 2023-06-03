@@ -15,10 +15,12 @@ class VisiMisiController extends Controller
      */
     public function index()
     {
-        $visi_misi = VisiMisi::orderBy('id', 'desc')->get();
+        $visi = VisiMisi::where('type', 1)->orderBy('id', 'desc')->get();
+        $misi = VisiMisi::where('type', 0)->orderBy('id', 'desc')->get();
 
         $data = [
-            'visi_misi' => $visi_misi
+            'visi' => $visi,
+            'misi' => $misi,
         ];
 
         return view('visi_misi.index', $data);
@@ -102,6 +104,7 @@ class VisiMisiController extends Controller
         try {
             $visi_misi = VisiMisi::find($id);
             $visi_misi->name = $request->name;
+            $visi_misi->type = $request->type;
             // $visi_misi->status = 1;
 
             if ($visi_misi->save()) {

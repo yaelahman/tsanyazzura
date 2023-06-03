@@ -60,11 +60,13 @@ class ProductController extends Controller
             $product = new Product();
             $product->id_users = Auth::user()->id;
             $product->id_category = 1;
+            $product->full_name = $request->full_name;
+            $product->nim = $request->nim;
             $product->name = $request->name;
             $product->description = $request->description;
             $product->whatsapp = $request->whatsapp;
             $product->stock = $request->stock;
-            $product->status = 1;
+            $product->status = $request->status ?? 1;
             $product->on_click = 0;
 
             if ($product->save()) {
@@ -92,8 +94,14 @@ class ProductController extends Controller
                 $request->session()->flash('alert', 'success');
                 $request->session()->flash('message', 'Product created successfully');
 
+                if (auth()->check()) {
+                    if (auth()->user()->role == 1) {
+                        DB::commit();
+                        return redirect()->to(route('product.index'));
+                    }
+                }
                 DB::commit();
-                return redirect()->to(route('product.index'));
+                return redirect()->to(route('landing.lapak'));
             }
         } catch (\Exception $e) {
             DB::rollBack();
@@ -147,6 +155,8 @@ class ProductController extends Controller
         try {
             $product = Product::find($id);
             $product->id_category = 1;
+            $product->full_name = $request->full_name;
+            $product->nim = $request->nim;
             $product->name = $request->name;
             $product->description = $request->description;
             $product->whatsapp = $request->whatsapp;
@@ -206,5 +216,18 @@ class ProductController extends Controller
         return response()->json([
             'data' => $image
         ], 200);
+    }
+
+
+    public function status(Request $request, $id)
+    {
+        $product = Product::find($id);
+        $product->status = $product->status == 1 ? 0 : 1;
+
+        if ($product->save()) {
+            $request->session()->flash('alert', 'success');
+            $request->session()->flash('message', 'Tim update successfully');
+            return redirect()->to(route('product.index'));
+        }
     }
 }

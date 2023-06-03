@@ -29,6 +29,18 @@
                 @method('put')
                 @csrf
                 <div class="form-group">
+                    <label class="col-md-12 mb-0">Nama Lengkap</label>
+                    <div class="col-md-12">
+                        <input type="text" id="full_name" name="full_name" value="{{ $product->full_name }}" required placeholder="Nama Lengkap" class="form-control ps-0 form-control-line">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-12 mb-0">NIM</label>
+                    <div class="col-md-12">
+                        <input type="text" id="nim" name="nim" value="{{ $product->nim }}" required placeholder="110009xx" class="form-control ps-0 form-control-line">
+                    </div>
+                </div>
+                <div class="form-group">
                     <label class="col-md-12 mb-0">Nama</label>
                     <div class="col-md-12">
                         <input type="text" id="name" name="name" required placeholder="Seblak" value="{{ $product->name }}" class="form-control ps-0 form-control-line">

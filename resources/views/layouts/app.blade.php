@@ -24,7 +24,7 @@
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@9.17.2/dist/sweetalert2.min.css" rel="stylesheet">
     <link href="/template/assets/css/style.min.css" rel="stylesheet">
 
-
+    @yield('css')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -143,6 +143,10 @@
                                     href="{{ route('visi-misi.index') }}" aria-expanded="false"><i
                                         class="me-3 fa fa-table" aria-hidden="true"></i><span
                                         class="hide-menu">Visi Misi</span></a></li>
+                            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                    href="{{ route('program-kerja.index') }}" aria-expanded="false"><i
+                                        class="me-3 fa fa-table" aria-hidden="true"></i><span
+                                        class="hide-menu">Program Kerja</span></a></li>
 
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                     href="{{ route('galeri.index') }}" aria-expanded="false"><i
@@ -153,6 +157,11 @@
                                     href="{{ route('tim.index') }}" aria-expanded="false"><i
                                         class="me-3 fa fa-table" aria-hidden="true"></i><span
                                         class="hide-menu">Tim</span></a></li>
+
+                            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                    href="{{ route('aspirasi.index') }}" aria-expanded="false"><i
+                                        class="me-3 fa fa-table" aria-hidden="true"></i><span
+                                        class="hide-menu">Aspirasi</span></a></li>
 
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                     href="{{ route('settings.index') }}" aria-expanded="false"><i

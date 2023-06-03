@@ -28,11 +28,22 @@
         <div class="card-body">
             <form class="form-horizontal form-material mx-2" method="post" action="{{ route('visi-misi.store') }}">
                 @csrf
-                <div class="form-group">
-                    <label class="col-md-12 mb-0">Name</label>
-                    <div class="col-md-12">
-                        <input type="text" id="name" name="name" required placeholder="Makanan"
-                            class="form-control ps-0 form-control-line">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="form-group">
+                            <label class="col-md-12 mb-0">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Visi Misi"
+                                class="form-control ps-0 form-control-line">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label class="col-md-12 mb-0">Tipe</label>
+                            <select name="type" class="form-control ps-0 form-control-line" required>
+                                <option value="0">Misi</option>
+                                <option value="1" selected>Visi</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group">

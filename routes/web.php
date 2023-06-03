@@ -43,12 +43,16 @@ Route::prefix('/admin')->group(function () {
 
         Route::post('/product/image', 'ProductController@ImageProduct')->name('product.image');
         Route::resource('/product', 'ProductController');
+        Route::post('/product/status/{id}', 'ProductController@status');
 
         Route::resource('/banner', 'BannerController');
         Route::resource('/galeri', 'GaleriController');
         Route::resource('/tim', 'TimController');
         Route::post('/tim/status/{id}', 'TimController@status');
+        Route::get('/aspirasi', 'AspirasiController@index')->name('aspirasi.index');
+        Route::put('/aspirasi', 'AspirasiController@balas')->name('aspirasi.balas');
         Route::resource('/visi-misi', 'VisiMisiController');
+        Route::resource('/program-kerja', 'ProgramKerjaController');
 
         Route::get('/profile', 'HomeController@profile')->name('profile.index');
         Route::post('/profile/{profile}', 'HomeController@updateProfile')->name('profile.update');

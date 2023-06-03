@@ -9,13 +9,25 @@ use Illuminate\Support\Str;
 
 class AspirasiController extends Controller
 {
+
+    public function index()
+    {
+
+        $aspirasi = Aspirasi::with('prodi:id,name')->get();
+
+        return view('aspirasi.index', [
+            'aspirasi' => $aspirasi
+        ]);
+    }
+
     public function store(Request $request)
     {
         DB::beginTransaction();
         try {
             $aspirasi = new Aspirasi();
-            $aspirasi->id_prodi = $request->prodi;
-            $aspirasi->jenis = $request->jenis;
+            $aspirasi->id_prodi = 1;
+            $aspirasi->prodi = $request->prodi;
+            $aspirasi->jenis = $request->jenis ?? 0;
             $aspirasi->nama = $request->nama;
             $aspirasi->nim = $request->nim;
             $aspirasi->email = $request->email;
@@ -36,6 +48,35 @@ class AspirasiController extends Controller
             $aspirasi->save();
             DB::commit();
 
+            return redirect()->back();
+        } catch (\Exception $err) {
+            DB::rollBack();
+            throw $err;
+
+            return redirect()->back();
+        }
+    }
+
+    public function balas(Request $request)
+    {
+        DB::beginTransaction();
+        try {
+
+            $aspirasi = Aspirasi::find($request->id);
+            if ($aspirasi) {
+                $aspirasi->balasan = $request->balasan;
+
+                $aspirasi->save();
+
+                $request->session()->flash('alert', 'success');
+                $request->session()->flash('message', 'Aspirasi Berhasil Dibalas');
+
+                DB::commit();
+                return back();
+            }
+
+            $request->session()->flash('alert', 'warning');
+            $request->session()->flash('message', 'Aspirasi tidak ditemukan');
             return redirect()->back();
         } catch (\Exception $err) {
             DB::rollBack();

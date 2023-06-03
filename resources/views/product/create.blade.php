@@ -28,6 +28,18 @@
             <form class="form-horizontal form-material mx-2" method="post" action="{{ route('product.store') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
+                    <label class="col-md-12 mb-0">Nama Lengkap</label>
+                    <div class="col-md-12">
+                        <input type="text" id="full_name" name="full_name" required placeholder="Nama Lengkap" class="form-control ps-0 form-control-line">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-12 mb-0">NIM</label>
+                    <div class="col-md-12">
+                        <input type="text" id="nim" name="nim" required placeholder="110009xx" class="form-control ps-0 form-control-line">
+                    </div>
+                </div>
+                <div class="form-group">
                     <label class="col-md-12 mb-0">Nama</label>
                     <div class="col-md-12">
                         <input type="text" id="name" name="name" required placeholder="Seblak" class="form-control ps-0 form-control-line">

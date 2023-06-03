@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="{{ asset('assets') }}/css/glightbox.min.css" />
 
     <link rel="stylesheet" href="{{ asset('') }}/style.css" />
+
+    @yield('css')
 </head>
 
 <body>

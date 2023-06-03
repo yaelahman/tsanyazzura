@@ -1,4 +1,10 @@
 @extends('home.layouts')
+@section('css')
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css"> -->
+<!-- <link href="/template/assets/css/style.min.css" rel="stylesheet"> -->
+
+@endsection
 @section('content')
 <div id="blog" class="latest-news-area section">
     <!--======  Start Section Title Five ======-->
@@ -8,6 +14,11 @@
                 <div class="col-12">
                     <div class="content pt-4">
                         <h2 class="fw-bold">Lapak Sakti</h2>
+                        <div class="mb-5">
+                            <div class="light-rounded-buttons">
+                                <a href="javascript:void(0)" data-backdrop="static" data-toggle="modal" data-target="#addProductModal" class="btn primary-btn-outline text-sm">Daftarkan Produkmu Disini</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -70,6 +81,62 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="addProductLabel">Tambah Product</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal form-material mx-2" method="post" action="{{ route('product.store') }}" enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group">
+                            <label class="col-md-12 mb-0">Nama Lengkap</label>
+                            <div class="col-md-12">
+                                <input type="text" id="full_name" name="full_name" required placeholder="Nama Lengkap" class="form-control ps-0 form-control-line">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12 mb-0">NIM</label>
+                            <div class="col-md-12">
+                                <input type="text" id="nim" name="nim" required placeholder="110009xx" class="form-control ps-0 form-control-line">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12 mb-0">Nama</label>
+                            <div class="col-md-12">
+                                <input type="text" id="name" name="name" required placeholder="Seblak" class="form-control ps-0 form-control-line">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12 mb-0">Deskripsi</label>
+                            <div class="col-md-12">
+                                <textarea name="description" id="description" cols="30" rows="10" class="form-control" value="......" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-12 mb-0">No WhatsApp</label>
+                            <div class="col-md-12">
+                                <input type="number" id="whatsapp" name="whatsapp" required placeholder="0857xxx" class="form-control ps-0 form-control-line">
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-primary addImageButton" style="font-size: 10px;"><i class="fas fa-plus"></i>&nbsp;Tambah
+                            Gambar
+                            Produk</button>
+
+                        <div class="file-form-list"></div>
+                        <div class="form-group mt-3">
+                            <div class="col-sm-12 d-flex">
+                                <button class="btn btn-success mx-auto mx-md-0 text-white" style="font-size: 10px;">Save Product</button>
+                                <button class="btn btn-danger mx-auto mx-md-0 text-white" type="button" class="close" data-dismiss="modal" style="font-size: 10px;">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
 @section('script')
@@ -85,5 +152,45 @@
         $('.imageee').attr('src', "{{ asset('products') }}/" + image)
         $('.modal-title').html(name)
     })
+
+    let index = 0
+    $('.addImageButton').on('click', function() {
+        $('.file-form-list').append(`
+            <div class="row form-image-${index}">
+                <div class="col-sm-6">
+                    <div class="form-group mt-3">
+                        <div class="col-md-12">
+                            <input type="file" id="image" onchange="preview(${index})" name="image[]" required
+                                class="form-control ps-0 form-control-line">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-info mt-3 d-none lihat-gambar-${index}" target="_blank"><i class="fas fa-eye"></i>&nbsp;Lihat
+                            Gambar</a>
+                        &nbsp;
+                        <button type="button" class="btn btn-danger mt-3" onclick="deleteFormImage(${index})" style="font-size: 10px;"><i class="fas fa-trash"></i>&nbsp;Hapus
+                            Gambar</button>
+                    </div>
+                </div>
+            </div>
+            `)
+        index++
+    })
+
+    function preview(index) {
+        console.log(event.target.files)
+        $('.lihat-gambar-' + index).removeClass('d-none')
+        $('.lihat-gambar-' + index).attr('href', URL.createObjectURL(event.target.files[0]))
+    }
+
+    $('#image').on('change', function(e) {
+        console.log(e.target.files[0])
+    })
+
+    function deleteFormImage(indexNow) {
+        $('.form-image-' + indexNow).remove()
+    }
 </script>
 @endsection

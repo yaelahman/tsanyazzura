@@ -7,6 +7,7 @@ use App\Category;
 use App\FAQ;
 use App\Product;
 use App\Settings;
+use App\VisiMisi;
 use Illuminate\Http\Request;
 
 class LandingController extends Controller
@@ -50,11 +51,16 @@ class LandingController extends Controller
             $settings[$set->name] = $set->text;
         }
 
+        $visi = VisiMisi::where('type', 1)->orderBy('id', 'asc')->get();
+        $misi = VisiMisi::where('type', 0)->orderBy('id', 'asc')->get();
+
+
         $data = [
             'settings' => $settings,
             'detail' => false,
             'active' => 'visi-misi',
-            'visi_misi' => \App\VisiMisi::all(),
+            'misi' => $misi,
+            'visi' => $visi,
             'program_kerja' => \App\ProgramKerja::all()
         ];
 
@@ -126,7 +132,7 @@ class LandingController extends Controller
             'settings' => $settings,
             'detail' => false,
             'active' => 'lapak',
-            'products' => \App\Product::all(),
+            'products' => \App\Product::where('status', 1)->get(),
         ];
 
         return view('home.lapak', $data);

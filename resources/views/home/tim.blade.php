@@ -39,7 +39,7 @@
             </div>
         </div>
         @endif
-        <div class="row">
+        <div class="row justify-content-center">
             @foreach($tim as $row)
             <div class="col-lg-3 col-md-4 col-12 px-5 px-sm-2 mb-4">
                 <!-- Single News -->

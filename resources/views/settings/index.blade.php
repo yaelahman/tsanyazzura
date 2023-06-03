@@ -1,4 +1,9 @@
 @extends('layouts/app')
+@section('css')
+
+    <link rel="stylesheet" href="{{ asset('assets/plugins/summernote/summernote-bs4.min.css') }}">
+
+@endsection
 @section('content')
     <div class="page-breadcrumb">
         <div class="row align-items-center">
@@ -73,6 +78,7 @@
     </div>
 @endsection
 @section('script')
+    <script src="{{ asset('assets/plugins/summernote/summernote-bs4.min.js') }}"></script>
     <script type="text/javascript">
         $('.button-delete').click(function() {
             var id = $(this).attr('data-id');
@@ -105,5 +111,9 @@
             $('.lihat-gambar-' + index).removeClass('d-none')
             $('.lihat-gambar-' + index).attr('href', URL.createObjectURL(event.target.files[0]))
         }
+
+        $(document).ready(() => {
+            $('textarea[name="kolom[]"]').summernote();
+        })
     </script>
 @endsection
