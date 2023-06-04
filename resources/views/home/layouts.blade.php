@@ -40,8 +40,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html">
-                            <img src="{{ asset('galeri/' . $settings['logo']) }}" alt="Logo" />
+                        <a class="navbar-brand" href="{{ url('') }}">
+                            <img src="{{ asset('galeri/' . $settings['logo']) }}" height="40px" alt="Logo" />
                             <!-- <h3 class="text-white">TA</h3> -->
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine" aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +51,7 @@
                         </button>
 
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
-                            <ul class="navbar-nav me-auto">
+                            <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
                                     <a class="nav-link {{ $active == null ? 'active' : '' }}" href="{{ url('') }}">Beranda</a>
                                 </li>
@@ -79,10 +79,6 @@
                                 </li>
                             </ul>
                         </div>
-
-                        <div class="navbar-btn d-none d-lg-inline-block">
-                            <a class="menu-bar" href="#side-menu-left"><i class="lni lni-menu"></i></a>
-                        </div>
                     </nav>
                     <!-- navbar -->
                 </div>
@@ -95,47 +91,7 @@
     <!--====== NAVBAR NINE PART ENDS ======-->
 
     <!--====== SIDEBAR PART START ======-->
-
-    <div class="sidebar-left">
-        <div class="sidebar-close">
-            <a class="close" href="#close"><i class="lni lni-close"></i></a>
-        </div>
-        <div class="sidebar-content">
-            {{-- <div class="sidebar-logo">
-                <a href="index.html"><img src="assets/images/logo.svg" alt="Logo" /></a>
-            </div>
-            <p class="text">Lorem ipsum dolor sit amet adipisicing elit. Sapiente fuga nisi rerum iusto intro.</p>
-            <!-- logo -->
-            <div class="sidebar-menu">
-                <h5 class="menu-title">Quick Links</h5>
-                <ul>
-                    <li><a href="javascript:void(0)">About Us</a></li>
-                    <li><a href="javascript:void(0)">Our Team</a></li>
-                    <li><a href="javascript:void(0)">Latest News</a></li>
-                    <li><a href="javascript:void(0)">Contact Us</a></li>
-                </ul>
-            </div> --}}
-            <!-- menu -->
-            <div class="sidebar-social align-items-center justify-content-center">
-                <h5 class="social-title">Follow Us On</h5>
-                <ul>
-                    <li>
-                        <a href="{{ $settings['facebook'] }}"><i class="lni lni-facebook-filled"></i></a>
-                    </li>
-                    <li>
-                        <a href="{{ $settings['instagram'] }}"><i class="lni lni-instagram-original"></i></a>
-                    </li>
-                    <li>
-                        <a href="{{ $settings['linkedin'] }}"><i class="lni lni-linkedin-original"></i></a>
-                    </li>
-                    <li>
-                        <a href="https://wa.me/62{{ $settings['whatsapp'] }}"><i class="lni lni-whatsapp"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <!-- sidebar social -->
-        </div>
-        <!-- content -->
+    <!-- content -->
     </div>
     <div class="overlay-left"></div>
 

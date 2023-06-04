@@ -16,7 +16,7 @@
                         <h2 class="fw-bold">Lapak Sakti</h2>
                         <div class="mb-5">
                             <div class="light-rounded-buttons">
-                                <a href="javascript:void(0)" data-backdrop="static" data-toggle="modal" data-target="#addProductModal" class="btn primary-btn-outline text-sm">Daftarkan Produkmu Disini</a>
+                                <a href="javascript:void(0)" data-backdrop="static" data-toggle="modal" data-target="#addProductModal" class="btn primary-btn-outline text-sm">Daftarkan Produkmu Disini Braw</a>
                             </div>
                         </div>
                     </div>

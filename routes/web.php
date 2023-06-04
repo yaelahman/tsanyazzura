@@ -51,6 +51,7 @@ Route::prefix('/admin')->group(function () {
         Route::post('/tim/status/{id}', 'TimController@status');
         Route::get('/aspirasi', 'AspirasiController@index')->name('aspirasi.index');
         Route::put('/aspirasi', 'AspirasiController@balas')->name('aspirasi.balas');
+        Route::delete('/aspirasi/{id}', 'AspirasiController@destroy')->name('aspirasi.destroy');
         Route::resource('/visi-misi', 'VisiMisiController');
         Route::resource('/program-kerja', 'ProgramKerjaController');
 

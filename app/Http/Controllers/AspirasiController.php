@@ -13,7 +13,7 @@ class AspirasiController extends Controller
     public function index()
     {
 
-        $aspirasi = Aspirasi::with('prodi:id,name')->get();
+        $aspirasi = Aspirasi::all();
 
         return view('aspirasi.index', [
             'aspirasi' => $aspirasi
@@ -51,7 +51,7 @@ class AspirasiController extends Controller
             return redirect()->back();
         } catch (\Exception $err) {
             DB::rollBack();
-            throw $err;
+            // throw $err;
 
             return redirect()->back();
         }
@@ -83,6 +83,18 @@ class AspirasiController extends Controller
             throw $err;
 
             return redirect()->back();
+        }
+    }
+
+
+    public function destroy(Request $request, $id)
+    {
+        $prodi = Aspirasi::find($id);
+
+        if ($prodi->delete()) {
+            $request->session()->flash('alert', 'success');
+            $request->session()->flash('message', 'Aspirasi deleted successfully');
+            return redirect()->to(route('aspirasi.index'));
         }
     }
 }
