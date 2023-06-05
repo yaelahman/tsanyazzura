@@ -42,6 +42,7 @@
                     <thead>
                         <tr>
                             <th class="border-top-0">No.</th>
+                            <th class="border-top-0">Lampiran</th>
                             <th class="border-top-0">Prodi</th>
                             <th class="border-top-0">Angkatan</th>
                             <th class="border-top-0">pesan</th>
@@ -52,6 +53,13 @@
                         @foreach ($aspirasi as $index => $row)
                         <tr>
                             <td>{{ $index + 1 }}</td>
+                            <td>
+                                @if($row->lampiran != null)
+                                <button class="btn btn-primary btn-sm btn-modal-image" data-bs-toggle="modal" data-bs-target="#bs-example-modal-lg" data-id="{{ $row->id }}">
+                                    Lihat
+                                </button>
+                                @endif
+                            </td>
                             <td>{{ $row->prodi }}</td>
                             <td>{{ $row->angkatan ?? '-' }}</td>
                             <td>{{ $row->pesan ?? '-' }}</td>

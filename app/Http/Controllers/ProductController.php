@@ -58,14 +58,14 @@ class ProductController extends Controller
         DB::beginTransaction();
         try {
             $product = new Product();
-            $product->id_users = Auth::user()->id;
+            $product->id_users = Auth::user()->id ?? 1;
             $product->id_category = 1;
             $product->full_name = $request->full_name;
             $product->nim = $request->nim;
             $product->name = $request->name;
             $product->description = $request->description;
             $product->whatsapp = $request->whatsapp;
-            $product->stock = $request->stock;
+            $product->stock = $request->stock ?? 100;
             $product->status = $request->status ?? 1;
             $product->on_click = 0;
 

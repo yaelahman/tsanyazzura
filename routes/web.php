@@ -35,6 +35,7 @@ Route::get('/artisan', function () {
 Route::prefix('/admin')->group(function () {
     Auth::routes(['register' => false]);
 
+    Route::resource('/product', 'ProductController');
     Route::middleware('auth')->group(function () {
         Route::get('/', 'HomeController@index')->name('home');
 
@@ -42,7 +43,6 @@ Route::prefix('/admin')->group(function () {
         Route::resource('/prodi', 'ProdiController');
 
         Route::post('/product/image', 'ProductController@ImageProduct')->name('product.image');
-        Route::resource('/product', 'ProductController');
         Route::post('/product/status/{id}', 'ProductController@status');
 
         Route::resource('/banner', 'BannerController');

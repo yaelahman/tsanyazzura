@@ -48,6 +48,7 @@ class VisiMisiController extends Controller
         try {
             $visi_misi = new VisiMisi();
             $visi_misi->name = $request->name;
+            $visi_misi->type = $request->type;
             // $visi_misi->status = 1;
 
             if ($visi_misi->save()) {
