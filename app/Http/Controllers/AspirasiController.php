@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Aspirasi;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 class AspirasiController extends Controller
@@ -13,7 +14,7 @@ class AspirasiController extends Controller
     public function index()
     {
 
-        $aspirasi = Aspirasi::all();
+        $aspirasi = Aspirasi::orderBy('id')->get();
 
         return view('aspirasi.index', [
             'aspirasi' => $aspirasi
@@ -41,8 +42,7 @@ class AspirasiController extends Controller
                 $name = Str::random(11);
                 $newName = $name . $format;
                 $request->file('lampiran')->move(public_path() . '/galeri', $newName);
-
-                $aspirasi->lampiran = $request->lampiran;
+                $aspirasi->lampiran = $newName;
             }
 
             $aspirasi->save();
@@ -52,6 +52,7 @@ class AspirasiController extends Controller
         } catch (\Exception $err) {
             DB::rollBack();
             // throw $err;
+            Log::info($err);
 
             return redirect()->back();
         }

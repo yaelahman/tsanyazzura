@@ -116,7 +116,7 @@ use \App\Aspirasi;
         </div>
         <div class="row mb-4">
             @foreach($aspirasi as $index => $row)
-            <div class="col-md-4">
+            <div class="col-md-4 mb-4">
                 <div class="card-aspirasi-{{ $index }} card h-100">
                     <div class="card-header bg-primary">
                         <div class="d-flex">

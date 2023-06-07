@@ -157,27 +157,14 @@
             sidebarLeft.classList.toggle("open");
             overlayLeft.classList.toggle("open");
         });
-        sidebarClose.addEventListener("click", function() {
-            sidebarLeft.classList.remove("open");
-            overlayLeft.classList.remove("open");
-        });
 
         // ===== navbar nine sideMenu
         let sideMenuLeftNine = document.querySelector(".navbar-nine .menu-bar");
 
-        sideMenuLeftNine.addEventListener("click", function() {
-            sidebarLeft.classList.add("open");
-            overlayLeft.classList.add("open");
-        });
-
-        //========= glightbox
-        GLightbox({
-            'href': 'https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM',
-            'type': 'video',
-            'source': 'youtube', //vimeo, youtube or local
-            'width': 900,
-            'autoplayVideos': true,
-        });
+        // $('.about-area').css('background-color', 'salmon')
+        $(document).ready(function() {
+            $('.about-five').attr('style', "background:{{ $settings['background'] ?? 'white' }}!important;")
+        })
     </script>
     @yield('script')
 </body>

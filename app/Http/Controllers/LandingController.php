@@ -78,7 +78,7 @@ class LandingController extends Controller
             'settings' => $settings,
             'detail' => false,
             'active' => 'kotak-aspirasi',
-            'aspirasi' => \App\Aspirasi::all(),
+            'aspirasi' => \App\Aspirasi::orderBy('id', 'desc')->get(),
             'prodi' => \App\Prodi::all(),
         ];
 

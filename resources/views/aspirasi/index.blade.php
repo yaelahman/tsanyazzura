@@ -38,7 +38,7 @@
         <div class="card-body">
             <h4 class="card-title mb-3">Data Aspirasi</h4>
             <div class="table-responsive">
-                <table id="datatable1" class="table user-table no-wrap">
+                <table id="datatable1" class="table user-table">
                     <thead>
                         <tr>
                             <th class="border-top-0">No.</th>
