@@ -24,6 +24,9 @@ Route::get('/warta', 'LandingController@warta')->name('landing.warta');
 Route::get('/tim', 'LandingController@tim')->name('landing.tim');
 Route::get('/lapak', 'LandingController@lapak')->name('landing.lapak');
 Route::get('/lapak/{id}', 'LandingController@lapakDetail')->name('landing.lapak_detail');
+Route::get('dukung-sakti', 'LandingController@dukungSakti')->name('landing.dukung_sakti');
+Route::get('dukung-sakti/success', 'LandingController@dukungSaktiSuccess')->name('landing.dukung_sakti.success');
+Route::post('dukung-sakti', 'LandingController@dukungSaktiStore')->name('landing.dukung_sakti.store');
 
 Route::get('/faq', 'LandingController@faq')->name('landing.faq');
 Route::get('/detail/{id}', 'LandingController@detail');
@@ -41,6 +44,7 @@ Route::prefix('/admin')->group(function () {
 
         Route::resource('/category', 'CategoryController');
         Route::resource('/prodi', 'ProdiController');
+        Route::resource('/dukung-sakti', 'DukungSaktiController');
 
         Route::post('/product/image', 'ProductController@ImageProduct')->name('product.image');
         Route::post('/product/status/{id}', 'ProductController@status');

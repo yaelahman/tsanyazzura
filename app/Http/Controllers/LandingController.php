@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Banner;
 use App\Category;
 use App\FAQ;
+use App\Models\DukungSakti;
 use App\Product;
 use App\Settings;
 use App\VisiMisi;
@@ -188,9 +189,24 @@ class LandingController extends Controller
         return view('landing', $data);
     }
 
-    public function faq(Request $request)
+    public function dukungSakti(Request $request)
     {
-        $category = Category::all();
+        $settings = [];
+        foreach (Settings::all() as $set) {
+            $settings[$set->name] = $set->text;
+        }
+
+        // dd($products->first());
+
+        $data = [
+            'settings' => $settings,
+            'detail' => true
+        ];
+        return view('home.dukung_sakti', $data);
+    }
+
+    public function dukungSaktiSuccess(Request $request)
+    {
 
         $settings = [];
         foreach (Settings::all() as $set) {
@@ -200,12 +216,15 @@ class LandingController extends Controller
         // dd($products->first());
 
         $data = [
-            'faq' => FAQ::where('status', true)->get(),
-            'category' => $category,
             'settings' => $settings,
-            'banners' => Banner::orderBy('order', 'asc')->get(),
             'detail' => true
         ];
-        return view('faq', $data);
+        return view('home.success', $data);
+    }
+
+    public function dukungSaktiStore(Request $request)
+    {
+        DukungSakti::create($request->all());
+        return redirect()->to(route('landing.dukung_sakti.success'));
     }
 }

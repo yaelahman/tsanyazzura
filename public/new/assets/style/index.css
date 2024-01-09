@@ -1,0 +1,341 @@
+:root {
+    --primary: #0053A3;
+    --swiper-navigation-size: 1px;
+    --secondary: #15152C;
+}
+
+body {
+    font-family: Inter;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: white !important;
+    min-height: 80px;
+}
+
+.navbar .logo {
+    position: relative;
+    width: 120px;
+}
+
+.navbar .logo img {
+    position: absolute;
+    top: -30px;
+}
+
+.navbar .link {
+    transition: all;
+    transition-duration: 300;
+}
+
+.navbar .link:hover {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+#jumbotron {
+    margin-top: 0px;
+    position: relative;
+}
+
+#jumbotron img {
+    max-width: 1080px;
+}
+
+#jumbotron .image {
+    position: relative;
+}
+
+#jumbotron #overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(6deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 35%, rgba(0, 212, 255, 0) 100%);
+    box-shadow: 0px -14px 48px 17px rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: 0px -14px 48px 17px rgba(255, 255, 255, 0.75);
+    -moz-box-shadow: 0px -14px 48px 17px rgba(255, 255, 255, 0.75);
+}
+
+#about {
+    background-color: var(--primary);
+    min-height: 200px;
+    position: relative;
+}
+
+#about small {
+    color: #a99e9e;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+#about .name {
+    position: relative;
+}
+
+#about .name::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #ff3900;
+    bottom: 0;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-image: url("../img/helper.webp");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    border-radius: 2rem;
+}
+
+#about ul {
+    background-color: rgba(0, 0, 0, 0.2);
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#about ul li {
+    padding-top: 20px;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+#about ul li .badge {
+    width: 40px;
+    font-size: 16px;
+    padding-top: 2px;
+}
+
+#about ul li p {
+    font-size: 14px;
+}
+
+#visimisi {
+    background-color: #F6F6F6;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.nav-swiper {
+    position: relative;
+}
+
+.swiper-button-prev {
+    padding: 18px !important;
+    width: 1px !important;
+    height: 7px !important;
+    background: var(--primary);
+    border-radius: 50%;
+    color: white !important;
+}
+
+.swiper-button-next {
+    padding: 18px !important;
+    width: 1px !important;
+    height: 7px !important;
+    background: var(--primary);
+    border-radius: 50%;
+    color: white !important;
+    left: 50px !important;
+}
+
+.image-product-new {
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 4/6;
+    max-width: 100%;
+    height: 300px !important;
+    cursor: pointer;
+}
+
+.card-product-image {
+    border-radius: 10px;
+    padding: 2px;
+    background-color: #f6f6f6;
+    transition: all;
+    transition-duration: 150ms;
+    position: relative;
+    cursor: pointer;
+}
+
+.card-product-image::before {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--primary));
+
+    opacity: 1;
+    bottom: 0;
+    border-radius: 10px;
+    inset: 0px;
+    transition: opacity;
+    transition-duration: 150ms;
+}
+
+.card-product-image:hover {
+    background-color: var(--primary) !important;
+}
+
+.card-product-image:hover>.card-product-image-text {
+    transform: scale(1.05);
+}
+
+.card-product-image:hover>.card-product-blur {
+    opacity: 0.6;
+}
+
+.card-product-image-text {
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    color: white;
+    transform: scale(1);
+    transition: transform;
+    transition-duration: 150ms;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 999;
+}
+
+.card-product-blur {
+    position: absolute;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), var(--primary));
+
+    opacity: 0;
+    border-radius: 10px;
+    inset: 0px;
+    transition: opacity;
+    transition-duration: 150ms;
+}
+
+
+#support {
+    background-color: var(--secondary);
+    min-height: 200px;
+    position: relative;
+}
+
+#support small {
+    color: #a99e9e;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+#support .name {
+    position: relative;
+}
+
+#support .name::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #ff3900;
+    bottom: 0;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+#support::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-image: url("../img/helper.webp");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    border-radius: 2rem;
+}
+
+.btn-relative {
+    position: relative;
+    width: auto;
+    max-width: 299.53px;
+}
+
+.btn-tsany {
+    text-transform: uppercase;
+    border-radius: 12px;
+    padding: 15px 30px;
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    /* border: 2px solid red; */
+    position: absolute;
+    z-index: 100;
+    white-space: nowrap;
+}
+
+.border-btn {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 2px solid var(--primary);
+    border-radius: 12px;
+    width: 100%;
+    height: 56px;
+    top: 0;
+    left: 0;
+}
+
+.btn-tsany:hover {
+    background-color: var(--primary);
+    top: -4px;
+    left: -4px;
+}
+
+footer {
+    background-color: #f2f4f7;
+    color: #828a9b;
+    width: 100%;
+}
+
+.list-custom li {
+
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.list-custom li:hover {
+    background-color: var(--primary);
+    color: white !important;
+}
+
+.list-custom li:hover>a {
+    color: white !important;
+}

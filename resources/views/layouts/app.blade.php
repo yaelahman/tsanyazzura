@@ -62,14 +62,14 @@
                         <b class="logo-icon">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            MARKET
+                            RAIHAN
 
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span class="logo-text">
                             <!-- dark Logo text -->
-                            PLACE
+                            TSANY
 
                         </span>
                     </a>
@@ -111,8 +111,8 @@
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="#" id="navbarDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="#"
+                                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <img src="/template/assets/images/users/1.jpg" alt="user"
                                     class="profile-pic me-2">{{ Auth::user()->name }}
                             </a>
@@ -136,13 +136,16 @@
                     <ul id="sidebarnav">
                         @if (Auth::user()->role == 1)
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                    href="{{ route('prodi.index') }}" aria-expanded="false"><i
-                                        class="me-3 fa fa-table" aria-hidden="true"></i><span
-                                        class="hide-menu">Prodi</span></a></li>
+                                    href="{{ route('prodi.index') }}" aria-expanded="false"><i class="me-3 fa fa-table"
+                                        aria-hidden="true"></i><span class="hide-menu">Prodi</span></a></li>
+                            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                    href="{{ route('dukung-sakti.index') }}" aria-expanded="false"><i
+                                        class="me-3 fa fa-table" aria-hidden="true"></i><span class="hide-menu">Data
+                                        Pendukung</span></a></li>
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                     href="{{ route('visi-misi.index') }}" aria-expanded="false"><i
-                                        class="me-3 fa fa-table" aria-hidden="true"></i><span
-                                        class="hide-menu">Visi Misi</span></a></li>
+                                        class="me-3 fa fa-table" aria-hidden="true"></i><span class="hide-menu">Visi
+                                        Misi</span></a></li>
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                     href="{{ route('program-kerja.index') }}" aria-expanded="false"><i
                                         class="me-3 fa fa-table" aria-hidden="true"></i><span
@@ -154,9 +157,8 @@
                                         class="hide-menu">Galeri</span></a></li>
 
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                    href="{{ route('tim.index') }}" aria-expanded="false"><i
-                                        class="me-3 fa fa-table" aria-hidden="true"></i><span
-                                        class="hide-menu">Tim</span></a></li>
+                                    href="{{ route('tim.index') }}" aria-expanded="false"><i class="me-3 fa fa-table"
+                                        aria-hidden="true"></i><span class="hide-menu">Tim</span></a></li>
 
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                     href="{{ route('aspirasi.index') }}" aria-expanded="false"><i
@@ -173,7 +175,8 @@
                                 href="{{ route('product.index') }}" aria-expanded="false"><i class="me-3 fa fa-table"
                                     aria-hidden="true"></i><span class="hide-menu">Product</span></a></li>
                         <li class="text-center p-20 upgrade-btn">
-                            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                            <a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
                                           document.getElementById('logout-form').submit();"
                                 class="btn btn-danger text-white mt-4">Logout</a>
                         </li>
@@ -230,8 +233,7 @@
     <script src="/template/assets/js/custom.js"></script>
     <!--This page JavaScript -->
 
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js">
-    </script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
     <!--flot chart-->
     <script src="/template/assets/plugins/flot/jquery.flot.js"></script>
     <script src="/template/assets/plugins/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>

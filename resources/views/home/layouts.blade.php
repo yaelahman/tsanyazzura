@@ -1,172 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <!--====== Required meta tags ======-->
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Raihan Tsany</title>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('new') }}/assets/style/index.css">
 
-    <!--====== Title ======-->
-    <title>Tsany | Home</title>
-
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{ asset('assets') }}/favicon.svg" type="image/svg" />
-
-    <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/bootstrap.min.css" />
-
-    <!--====== Line Icons css ======-->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/lineicons.css" />
-
-    <!--====== Tiny Slider css ======-->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/tiny-slider.css" />
-
-    <!--====== gLightBox css ======-->
-    <link rel="stylesheet" href="{{ asset('assets') }}/css/glightbox.min.css" />
-
-    <link rel="stylesheet" href="{{ asset('') }}/style.css" />
-
-    @yield('css')
+    <link rel="icon" type="image/png" href="{{ asset('new') }}/assets/img/logo.webp" />
+    <link rel="stylesheet" href="{{ asset('new') }}/assets/style/swiper.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
+    <nav class="navbar sticky-top bg-body-tertiary py-4">
+        <div class="d-block d-md-none" style="position: absolute; left: 20px; top: 24px;">
+            <button class="btn btn-light text-primary my-auto" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="container-fluid d-flex justify-content-center gap-4">
+            <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.tentang') }}">Kenali Tsany</a>
+            <a class="nav-link link d-none mt-2 d-md-block" href="{{ url('') }}">Kotak Aspirasi</a>
+            <a class="nav-link link d-none mt-2 d-md-block" href="{{ url('') }}">Warta</a>
+            <a class="nav-link link logo mt-2" href="{{ url('') }}">
+                <img src="{{ asset('new') }}/assets/img/logo.webp" width="120px" alt="">
+            </a>
+            <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.dukung_sakti') }}">Dukung Sakti</a>
+            <a class="nav-link link d-none mt-2 d-md-block" href="{{ url('') }}">Lapak Sakti</a>
+            <a class="nav-link link d-none mt-2 d-md-block" href="{{ url('') }}">Program Kerja</a>
+        </div>
+    </nav>
+    <main class="mb-5">
 
-    <!--====== NAVBAR NINE PART START ======-->
+        @yield('content')
 
-    <section class="navbar-area navbar-nine">
+    </main>
+    <footer class="rounded-top-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="{{ url('') }}">
-                            <img src="{{ asset('galeri/' . $settings['logo']) }}" height="40px" alt="Logo" />
-                            <!-- <h3 class="text-white">TA</h3> -->
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNine" aria-controls="navbarNine" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="toggler-icon"></span>
-                            <span class="toggler-icon"></span>
-                            <span class="toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarNine">
-                            <ul class="navbar-nav ms-auto">
-                                <li class="nav-item">
-                                    <a class="nav-link {{ $active == null ? 'active' : '' }}" href="{{ url('') }}">Beranda</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link {{ $active == 'tentang' ? 'active' : '' }}" href="{{ url('tentang') }}">Tentang</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link {{ $active == 'visi-misi' ? 'active' : '' }}" href="{{ url('visi-misi') }}">Visi Misi</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link {{ $active == 'kotak-aspirasi' ? 'active' : '' }}" href="{{ url('kotak-aspirasi') }}">Kotak Aspirasi</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link {{ $active == 'warta' ? 'active' : '' }}" href="{{ url('warta') }}">Warta</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link {{ $active == 'tim' ? 'active' : '' }}" href="{{ url('tim') }}">Tim</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link {{ $active == 'lapak' ? 'active' : '' }}" href="{{ url('lapak') }}">Lapak SAKTI</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link {{ $active == 'desa' ? 'active' : '' }}" href="{{ url('desa') }}">i-Desa</a>
-                                </li>
-                            </ul>
+            <div class="row py-5">
+                <div class="col-md-4 mb-5">
+                    <div class="d-flex gap-3">
+                        <img src="{{ asset('new') }}/assets/img/R (473).webp" width="120px" height="120px"
+                            class="rounded-circle shadow border" alt="...">
+                        <div class="text-start">
+                            <small class="text-muted">Media Sosial</small>
+                            <h4 class="text-primary mb-0">RAIHAN TSANY</h4>
+                            <div class="d-flex gap-3" style="font-size: 30px;">
+                                <a href="#" target="_blank" style="text-decoration: none;">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" target="_blank" style="text-decoration: none;">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" target="_blank" style="text-decoration: none;">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" target="_blank" style="text-decoration: none;">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
                         </div>
-                    </nav>
-                    <!-- navbar -->
+                    </div>
+                </div>
+                <div class="col-md-4 mb-5 ps-5">
+                    <h6>DUKUNG TSANY</h6>
+                    <ul class="list-group">
+                        <li class="list-group-item bg-transparent border-0 p-0">
+                            <a href="{{ route('landing.tentang') }}" class="text-dark"
+                                style="text-decoration: none;">Kenali
+                                Tsany</a>
+                        </li>
+                        <li class="list-group-item bg-transparent border-0 p-0">
+                            <a href="{{ url('') }}" class="text-dark" style="text-decoration: none;">Kotak
+                                Aspirasi</a>
+                        </li>
+                        <li class="list-group-item bg-transparent border-0 p-0">
+                            <a href="{{ url('') }}" class="text-dark" style="text-decoration: none;">Warta</a>
+                        </li>
+                        <li class="list-group-item bg-transparent border-0 p-0">
+                            <a href="{{ route('landing.dukung_sakti') }}" class="text-dark"
+                                style="text-decoration: none;">Dukung Sakti</a>
+                        </li>
+                        <li class="list-group-item bg-transparent border-0 p-0">
+                            <a href="{{ url('') }}" class="text-dark" style="text-decoration: none;">Lapak
+                                Sakti</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-5 ps-5">
+                    <h6>Program Kerja</h6>
+                    <ul class="list-group">
+                        <li class="list-group-item bg-transparent border-0 p-0">
+                            <a href="{{ route('landing.tentang') }}" class="text-dark"
+                                style="text-decoration: none;">Kenali
+                                Tsany</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <!-- row -->
-        </div>
-        <!-- container -->
-    </section>
-
-    <!--====== NAVBAR NINE PART ENDS ======-->
-
-    <!--====== SIDEBAR PART START ======-->
-    <!-- content -->
-    </div>
-    <div class="overlay-left"></div>
-
-    <!--====== SIDEBAR PART ENDS ======-->
-
-    <!--====== ABOUT FIVE PART START ======-->
-
-    @yield('content')
-    <!-- Start Footer Area -->
-    <footer class="text-white py-3" style="background-color: var(--primary)">
-        <div class="d-flex align-items-center justify-content-center">
-            <h5 class="social-title text-white">Follow Us On</h5>
-        </div>
-        <ul class="d-flex justify-content-center">
-            <li>
-                <a href="{{ $settings['facebook'] }}"><i class="text-white mx-2 lni lni-facebook-filled"></i></a>
-            </li>
-            <li>
-                <a href="{{ $settings['instagram'] }}"><i class="text-white mx-2 lni lni-instagram-original"></i></a>
-            </li>
-            <li>
-                <a href="{{ $settings['linkedin'] }}"><i class="text-white mx-2 lni lni-linkedin-original"></i></a>
-            </li>
-            <li>
-                <a href="https://wa.me/62{{ $settings['whatsapp'] }}"><i class="text-white mx-2 lni lni-whatsapp"></i></a>
-            </li>
-        </ul>
-
-        <div class="pt-3 text-center">
-            Copyright © 2023 {{$settings['title']}}
+            <div class="text-center pb-3">©2024 Raihan Tsany</div>
         </div>
     </footer>
-    <!--/ End Footer Area -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                <img src="{{ asset('new') }}/assets/img/logo.webp" width="120px" alt="">
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
 
-    <a href="#" class="scroll-top btn-hover">
-        <i class="lni lni-chevron-up"></i>
-    </a>
-
-    <!--====== js ======-->
-    <script src="{{ asset('assets') }}/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('assets') }}/js/glightbox.min.js"></script>
-    <script src="{{ asset('assets') }}/js/main.js"></script>
-    <script src="{{ asset('assets') }}/js/tiny-slider.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <script>
-        //===== close navbar-collapse when a  clicked
-        let navbarTogglerNine = document.querySelector(
-            ".navbar-nine .navbar-toggler"
-        );
-        navbarTogglerNine.addEventListener("click", function() {
-            navbarTogglerNine.classList.toggle("active");
-        });
-
-        // ==== left sidebar toggle
-        let sidebarLeft = document.querySelector(".sidebar-left");
-        let overlayLeft = document.querySelector(".overlay-left");
-        let sidebarClose = document.querySelector(".sidebar-close .close");
-
-        overlayLeft.addEventListener("click", function() {
-            sidebarLeft.classList.toggle("open");
-            overlayLeft.classList.toggle("open");
-        });
-
-        // ===== navbar nine sideMenu
-        let sideMenuLeftNine = document.querySelector(".navbar-nine .menu-bar");
-
-        // $('.about-area').css('background-color', 'salmon')
-        $(document).ready(function() {
-            $('.about-five').attr('style', "background:{{ $settings['background'] ?? 'white' }}!important;")
-        })
+            <ul class="list-group list-custom rounded-0">
+                <li class="list-group-item border-0">
+                    <a href="{{ route('landing.tentang') }}" class="text-dark" style="text-decoration: none;">Kenali
+                        Tsany</a>
+                </li>
+                <li class="list-group-item border-0">
+                    <a href="{{ url('') }}" class="text-dark" style="text-decoration: none;">Program Kerja</a>
+                </li>
+                <li class="list-group-item border-0">
+                    <a href="{{ url('') }}" class="text-dark" style="text-decoration: none;">Kotak
+                        Aspirasi</a>
+                </li>
+                <li class="list-group-item border-0">
+                    <a href="{{ url('') }}" class="text-dark" style="text-decoration: none;">Warta</a>
+                </li>
+                <li class="list-group-item border-0">
+                    <a href="{{ route('landing.dukung_sakti') }}" class="text-dark"
+                        style="text-decoration: none;">Dukung Sakti</a>
+                </li>
+                <li class="list-group-item border-0">
+                    <a href="{{ url('') }}" class="text-dark" style="text-decoration: none;">Lapak Sakti</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
     </script>
-    @yield('script')
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1524: {
+                    slidesPerView: 4,
+                    spaceBetween: 30,
+                },
+            },
+        });
+    </script>
 </body>
 
 </html>
