@@ -20,6 +20,9 @@ class DukungSakti extends Model
         'wilayah',
         'tim_sukses',
         'koordinator',
-        'tps'
+        'tps',
+        'alamat',
+        'rt',
+        'rw'
     ];
 }

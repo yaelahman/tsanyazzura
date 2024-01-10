@@ -17,9 +17,14 @@
             <h5 class="fw-bold"> Sekarang anda telah berhasil bergabung menjadi bagian Bolone Raihan Tsany dan menjadi
                 Pemuda yang Still !</h5>
             <h6>Klik ini untuk berinteraksi langsung dengan Calon Dewan nya bolo, Mboten usah sungkan #bolodewe</h6>
-            <a href="http://linktr.ee/raihantsany" class="btn btn-primary">
-                Lanjut <i class="fas fa-arrow-right"></i>
-            </a>
+            <div class="d-flex gap-3 justify-content-center">
+                <a href="{{ route('landing.dukung_sakti') }}" class="btn btn-light">
+                    <i class="fas fa-arrow-left"></i> Kembali
+                </a>
+                <a href="http://linktr.ee/raihantsany" class="btn btn-primary">
+                    Lanjut <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
     </div>
 @endsection

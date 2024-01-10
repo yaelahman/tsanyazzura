@@ -17,4 +17,14 @@ class DukungSaktiController extends Controller
 
         return view('dukung_sakti.index', $data);
     }
+    public function destroy(Request $request, $id)
+    {
+        $data = DukungSakti::find($id);
+
+        if ($data->delete()) {
+            $request->session()->flash('alert', 'success');
+            $request->session()->flash('message', 'Dukung Sakti deleted successfully');
+            return redirect()->to(route('dukung-sakti.index'));
+        }
+    }
 }

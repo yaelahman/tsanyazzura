@@ -46,6 +46,7 @@
                                 <th class="border-top-0">Nama Koordinator</th>
                                 <th class="border-top-0">No TPS</th>
                                 <th class="border-top-0">Tanggal Gabung</th>
+                                <th class="border-top-0">Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -63,6 +64,12 @@
                                     <td>{{ $row->koordinator }}</td>
                                     <td>{{ $row->tps }}</td>
                                     <td>{{ date('d-m-Y H:i', strtotime($row->created_at)) }}</td>
+
+                                    <td>
+                                        <button class="button-delete btn btn-danger btn-sm btn-flat mr-2"
+                                            data-id="{{ $row->id }}" style="color: white"><i
+                                                class="fas fa-trash-alt"></i> Delete</button>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -81,7 +88,7 @@
         $('.button-delete').click(function() {
             var id = $(this).attr('data-id');
             var form = $('#form-delete');
-            form.attr('action', "{{ url('/admin/prodi') }}/" + id);
+            form.attr('action', "{{ url('/admin/dukung-sakti') }}/" + id);
 
             Swal.fire({
                 title: 'Are you sure?',
