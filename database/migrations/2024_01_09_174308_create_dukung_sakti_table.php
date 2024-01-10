@@ -20,6 +20,9 @@ return new class extends Migration
             $table->char('jenis_kelamin')->nullable();
             $table->date('tanggal_lahir')->nullable();
             $table->string('wilayah')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('rt')->nullable();
+            $table->string('rw')->nullable();
             $table->string('tim_sukses')->nullable();
             $table->string('koordinator')->nullable();
             $table->integer('tps')->nullable();

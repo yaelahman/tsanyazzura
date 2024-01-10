@@ -40,6 +40,8 @@
                                 <th class="border-top-0">Jenis Kelamin</th>
                                 <th class="border-top-0">Tanggal Lahir</th>
                                 <th class="border-top-0">Kelurahan</th>
+                                <th class="border-top-0">Alamat</th>
+                                <th class="border-top-0">RT/RW</th>
                                 <th class="border-top-0">Tim Sukses</th>
                                 <th class="border-top-0">Nama Koordinator</th>
                                 <th class="border-top-0">No TPS</th>
@@ -55,6 +57,8 @@
                                     <td>{{ $row->jenis_kelamin == 'L' ? 'Laki Laki' : 'Perempuan' }}</td>
                                     <td>{{ date('d-m-Y', strtotime($row->tanggal_lahir)) }}</td>
                                     <td>{{ $row->wilayah }}</td>
+                                    <td>{{ $row->alamat }}</td>
+                                    <td>{{ $row->rt }}/{{ $row->rw }}</td>
                                     <td>{{ $row->tim_sukses }}</td>
                                     <td>{{ $row->koordinator }}</td>
                                     <td>{{ $row->tps }}</td>
