@@ -14,7 +14,7 @@ class AspirasiController extends Controller
     public function index()
     {
 
-        $aspirasi = Aspirasi::orderBy('id')->get();
+        $aspirasi = Aspirasi::orderBy('id', 'desc')->get();
 
         return view('aspirasi.index', [
             'aspirasi' => $aspirasi
@@ -30,12 +30,16 @@ class AspirasiController extends Controller
             $aspirasi->prodi = $request->prodi;
             $aspirasi->jenis = $request->jenis ?? 0;
             $aspirasi->nama = $request->nama;
+            $aspirasi->no_hp = $request->no_hp;
+            $aspirasi->alamat = $request->alamat;
+            // $aspirasi-> = $request->;
             $aspirasi->nim = $request->nim;
             $aspirasi->email = $request->email;
             $aspirasi->angkatan = $request->angkatan;
             $aspirasi->lingkup_aspirasi = $request->lingkup_aspirasi;
             $aspirasi->sasaran_aspirasi = $request->sasaran_aspirasi;
             $aspirasi->pesan = $request->pesan;
+            $aspirasi->pekerjaan = $request->pekerjaan;
 
             if ($request->hasFile('lampiran')) {
                 $format = $request->file('lampiran')->getClientOriginalName();
@@ -51,7 +55,7 @@ class AspirasiController extends Controller
             return redirect()->back();
         } catch (\Exception $err) {
             DB::rollBack();
-            // throw $err;
+            throw $err;
             Log::info($err);
 
             return redirect()->back();

@@ -22,6 +22,7 @@ class LandingController extends Controller
 
         $data = [
             'settings' => $settings,
+            'misi' => VisiMisi::where('type', 1)->orderBy('id', 'asc')->get(),
             'detail' => false,
             'active' => null
         ];
@@ -52,8 +53,7 @@ class LandingController extends Controller
             $settings[$set->name] = $set->text;
         }
 
-        $visi = VisiMisi::where('type', 1)->orderBy('id', 'asc')->get();
-        $misi = VisiMisi::where('type', 0)->orderBy('id', 'asc')->get();
+        $misi = VisiMisi::where('type', 1)->orderBy('id', 'asc')->get();
 
 
         $data = [
@@ -61,11 +61,31 @@ class LandingController extends Controller
             'detail' => false,
             'active' => 'visi-misi',
             'misi' => $misi,
-            'visi' => $visi,
             'program_kerja' => \App\ProgramKerja::all()
         ];
 
         return view('home.visi_misi', $data);
+    }
+
+    public function visiMisiDetail(Request $request, $slug)
+    {
+        $settings = [];
+        foreach (Settings::all() as $set) {
+            $settings[$set->name] = $set->text;
+        }
+
+        $misi = VisiMisi::where('slug', $slug)->firstOrFail();
+
+
+        $data = [
+            'settings' => $settings,
+            'detail' => false,
+            'active' => 'visi-misi',
+            'misi' => $misi,
+            'allMisi' => VisiMisi::where('type', 1)->orderBy('id', 'asc')->get()
+        ];
+
+        return view('home.visi_misi_detail', $data);
     }
 
     public function kotakAspirasi(Request $request)
@@ -79,7 +99,7 @@ class LandingController extends Controller
             'settings' => $settings,
             'detail' => false,
             'active' => 'kotak-aspirasi',
-            'aspirasi' => \App\Aspirasi::orderBy('id', 'desc')->get(),
+            'aspirasi' => \App\Aspirasi::orderBy('id', 'desc')->whereDate('created_at', '>=', "2023-12-12")->get(),
             'prodi' => \App\Prodi::all(),
         ];
 

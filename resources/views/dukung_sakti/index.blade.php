@@ -35,10 +35,10 @@
                         <thead>
                             <tr>
                                 <th class="border-top-0">No.</th>
+                                <th class="border-top-0">NIK</th>
                                 <th class="border-top-0">Nama</th>
                                 <th class="border-top-0">WhatsApp</th>
                                 <th class="border-top-0">Jenis Kelamin</th>
-                                <th class="border-top-0">Tanggal Lahir</th>
                                 <th class="border-top-0">Kelurahan</th>
                                 <th class="border-top-0">Alamat</th>
                                 <th class="border-top-0">RT/RW</th>
@@ -53,10 +53,10 @@
                             @foreach ($dukung_sakti as $index => $row)
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
+                                    <td>{{ $row->nik }}</td>
                                     <td>{{ $row->nama }}</td>
                                     <td>{{ $row->whatsapp }}</td>
                                     <td>{{ $row->jenis_kelamin == 'L' ? 'Laki Laki' : 'Perempuan' }}</td>
-                                    <td>{{ date('d-m-Y', strtotime($row->tanggal_lahir)) }}</td>
                                     <td>{{ $row->wilayah }}</td>
                                     <td>{{ $row->alamat }}</td>
                                     <td>{{ $row->rt }}/{{ $row->rw }}</td>
@@ -66,6 +66,9 @@
                                     <td>{{ date('d-m-Y H:i', strtotime($row->created_at)) }}</td>
 
                                     <td>
+                                        <a href="{{ route('dukung-sakti.edit', ['dukung_sakti' => $row->id]) }}"
+                                            class=" btn btn-warning btn-sm btn-flat mr-2" data-id="{{ $row->id }}"
+                                            style="color: white"><i class="fas fa-pencil"></i> Edit</a>
                                         <button class="button-delete btn btn-danger btn-sm btn-flat mr-2"
                                             data-id="{{ $row->id }}" style="color: white"><i
                                                 class="fas fa-trash-alt"></i> Delete</button>

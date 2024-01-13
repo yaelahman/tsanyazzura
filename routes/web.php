@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'LandingController@index')->name('landing');
 Route::get('/tentang', 'LandingController@tentang')->name('landing.tentang');
 Route::get('/visi-misi', 'LandingController@visiMisi')->name('landing.visi_misi');
+Route::get('/visi-misi/{slug}', 'LandingController@visiMisiDetail')->name('landing.visi_misi.detail');
 Route::get('/kotak-aspirasi', 'LandingController@kotakAspirasi')->name('landing.kotak_aspirasi');
 Route::post('/kotak-aspirasi', 'AspirasiController@store')->name('landing.kotak_aspirasi.store');
 Route::get('/warta', 'LandingController@warta')->name('landing.warta');
@@ -44,6 +45,7 @@ Route::prefix('/admin')->group(function () {
 
         Route::resource('/category', 'CategoryController');
         Route::resource('/prodi', 'ProdiController');
+        Route::resource('/rekam', 'RekamJejakController');
         Route::resource('/dukung-sakti', 'DukungSaktiController');
 
         Route::post('/product/image', 'ProductController@ImageProduct')->name('product.image');

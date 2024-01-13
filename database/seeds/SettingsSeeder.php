@@ -65,5 +65,11 @@ class SettingsSeeder extends Seeder
             'title' => 'Footer',
             'text' => 'Dibuat Oleh Pasar Nusantara'
         ]);
+
+        DB::table('settings')->insert([
+            'name' => 'visi',
+            'title' => 'Visi',
+            'text' => 'Visi Anda'
+        ]);
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\VisiMisi;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class VisiMisiController extends Controller
 {
@@ -15,11 +16,9 @@ class VisiMisiController extends Controller
      */
     public function index()
     {
-        $visi = VisiMisi::where('type', 1)->orderBy('id', 'desc')->get();
-        $misi = VisiMisi::where('type', 0)->orderBy('id', 'desc')->get();
+        $misi = VisiMisi::where('type', 1)->orderBy('id', 'desc')->get();
 
         $data = [
-            'visi' => $visi,
             'misi' => $misi,
         ];
 
@@ -47,8 +46,16 @@ class VisiMisiController extends Controller
         DB::beginTransaction();
         try {
             $visi_misi = new VisiMisi();
-            $visi_misi->name = $request->name;
-            $visi_misi->type = $request->type;
+            $visi_misi->name = $request->name ?? $request->title;
+            $visi_misi->type = $request->type ?? 1;
+            $visi_misi->title = $request->title;
+            $visi_misi->slug = Str::slug($request->title);
+            $visi_misi->text = $request->text;
+            $format = $request->file('image')->getClientOriginalName();
+            $name = Str::random(11);
+            $newName = $name . $format;
+            $request->file('image')->move(public_path() . '/galeri', $newName);
+            $visi_misi->image = $newName;
             // $visi_misi->status = 1;
 
             if ($visi_misi->save()) {
@@ -104,8 +111,18 @@ class VisiMisiController extends Controller
         DB::beginTransaction();
         try {
             $visi_misi = VisiMisi::find($id);
-            $visi_misi->name = $request->name;
-            $visi_misi->type = $request->type;
+            $visi_misi->name = $request->name ?? $request->title;
+            $visi_misi->type = $request->type ?? 1;
+            $visi_misi->title = $request->title;
+            $visi_misi->slug = Str::slug($request->title);
+            $visi_misi->text = $request->text;
+            if ($request->hasFile('image')) {
+                $format = $request->file('image')->getClientOriginalName();
+                $name = Str::random(11);
+                $newName = $name . $format;
+                $request->file('image')->move(public_path() . '/galeri', $newName);
+                $visi_misi->image = $newName;
+            }
             // $visi_misi->status = 1;
 
             if ($visi_misi->save()) {

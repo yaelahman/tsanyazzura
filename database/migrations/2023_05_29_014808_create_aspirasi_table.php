@@ -15,15 +15,15 @@ return new class extends Migration
     {
         Schema::create('aspirasi', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_prodi');
-            $table->integer('jenis');
-            $table->string('nama');
-            $table->string('nim');
-            $table->string('email');
-            $table->string('angkatan');
-            $table->string('lingkup_aspirasi');
-            $table->string('sasaran_aspirasi');
-            $table->string('pesan');
+            $table->unsignedBigInteger('id_prodi')->nullable();
+            $table->integer('jenis')->nullable();
+            $table->string('nama')->nullable();
+            $table->string('nim')->nullable();
+            $table->string('email')->nullable();
+            $table->string('angkatan')->nullable();
+            $table->string('lingkup_aspirasi')->nullable();
+            $table->string('sasaran_aspirasi')->nullable();
+            $table->string('pesan')->nullable();
             $table->string('lampiran')->nullable();
             $table->timestamps();
         });

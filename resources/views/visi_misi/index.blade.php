@@ -42,7 +42,8 @@
                         <thead>
                             <tr>
                                 <th class="border-top-0">No.</th>
-                                <th class="border-top-0">Name</th>
+                                <th class="border-top-0">Judul</th>
+                                <th class="border-top-0">Gambar</th>
                                 <th class="border-top-0">Action</th>
                             </tr>
                         </thead>
@@ -50,7 +51,13 @@
                             @foreach ($misi as $index => $row)
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
-                                    <td>{{ $row->name }}</td>
+                                    <td>{{ $row->title }}</td>
+                                    <td>
+                                        <a class="btn btn-primary btn-sm btn-modal-image"
+                                            href="{{ asset('galeri/' . $row->image) }}" target="_blank">
+                                            Lihat
+                                        </a>
+                                    </td>
                                     <td>
                                         <a href="{{ route('visi-misi.edit', ['visi_misi' => $row->id]) }}"
                                             class="btn btn-warning btn-sm btn-flat mr-2"><i class="fas fa-pencil-alt"></i>
@@ -67,38 +74,7 @@
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-body">
-                <h4 class="card-title mb-3">Data Visi</h4>
-                <div class="table-responsive">
-                    <table id="datatable1" class="table user-table no-wrap">
-                        <thead>
-                            <tr>
-                                <th class="border-top-0">No.</th>
-                                <th class="border-top-0">Name</th>
-                                <th class="border-top-0">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($visi as $index => $row)
-                                <tr>
-                                    <td>{{ $index + 1 }}</td>
-                                    <td>{{ $row->name }}</td>
-                                    <td>
-                                        <a href="{{ route('visi-misi.edit', ['visi_misi' => $row->id]) }}"
-                                            class="btn btn-warning btn-sm btn-flat mr-2"><i class="fas fa-pencil-alt"></i>
-                                            Edit</a>
-                                        <button class="button-delete btn btn-danger btn-sm btn-flat mr-2"
-                                            data-id="{{ $row->id }}" style="color: white"><i
-                                                class="fas fa-trash-alt"></i> Delete</button>
-                                    </td>
-                                </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
+
         <form id="form-delete" action="" method="post" class="d-none">
             @csrf
             @method('delete')

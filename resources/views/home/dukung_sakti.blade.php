@@ -22,6 +22,11 @@
                 <input type="text" name="nama" class="form-control" required id="floatingInput" placeholder="">
                 <label for="floatingInput">Nama Lengkap (sesuai KTP) <small class="text-danger">*</small></label>
             </div>
+
+            <div class="form-floating mb-3">
+                <input type="number" name="nik" class="form-control" required id="floatingInput" placeholder="">
+                <label for="floatingInput">NIK <small class="text-danger">*</small></label>
+            </div>
             <div class="form-floating mb-3">
                 <select class="form-select" name="jenis_kelamin" id="floatingSelect" required
                     aria-label="Floating label select example">
@@ -29,11 +34,6 @@
                     <option value="P">Perempuan</option>
                 </select>
                 <label for="floatingSelect">Jenis Kelamin <small class="text-danger">*</small></label>
-            </div>
-
-            <div class="form-floating mb-3">
-                <input type="date" name="tanggal_lahir" required class="form-control" id="floatingInput" placeholder="">
-                <label for="floatingInput">Tanggal Lahir <small class="text-danger">*</small></label>
             </div>
 
             <div class="form-floating mb-3">

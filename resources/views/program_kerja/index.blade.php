@@ -15,7 +15,8 @@
             </div>
             <div class="col-md-6 col-4 align-self-center">
                 <div class="text-end upgrade-btn">
-                    <a href="{{ route('program-kerja.create') }}" class="btn btn-success d-none d-md-inline-block text-white">
+                    <a href="{{ route('program-kerja.create') }}"
+                        class="btn btn-success d-none d-md-inline-block text-white">
                         <i class="fas fa-plus"></i>&nbsp;
                         Add Program Kerja</a>
                 </div>
@@ -52,7 +53,7 @@
                                     <td>{{ $index + 1 }}</td>
                                     <td>{{ $row->name }}</td>
                                     <td>
-                                        <a href="{{ route('prodi.edit', ['prodi' => $row->id]) }}"
+                                        <a href="{{ route('program-kerja.edit', ['program_kerja' => $row->id]) }}"
                                             class="btn btn-warning btn-sm btn-flat mr-2"><i class="fas fa-pencil-alt"></i>
                                             Edit</a>
                                         <button class="button-delete btn btn-danger btn-sm btn-flat mr-2"

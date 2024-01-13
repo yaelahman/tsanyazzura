@@ -16,23 +16,37 @@
 </head>
 
 <body>
-    <nav class="navbar sticky-top bg-body-tertiary py-4">
-        <div class="d-block d-md-none" style="position: absolute; left: 20px; top: 24px;">
-            <button class="btn btn-light text-primary my-auto" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-        <div class="container-fluid d-flex justify-content-center gap-4">
-            <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.tentang') }}">Kenali Tsany</a>
-            <a class="nav-link link d-none mt-2 d-md-block" href="{{ url('') }}">Kotak Aspirasi</a>
-            <a class="nav-link link d-none mt-2 d-md-block" href="{{ url('') }}">Warta</a>
-            <a class="nav-link link logo mt-2" href="{{ url('') }}">
-                <img src="{{ asset('new') }}/assets/img/logo.webp" width="120px" alt="">
-            </a>
-            <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.dukung_sakti') }}">Dukung Sakti</a>
-            <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.lapak') }}">Lapak Sakti</a>
-            <a class="nav-link link d-none mt-2 d-md-block" href="{{ url('') }}">Program Kerja</a>
+    <nav class="navbar sticky-top bg-body-tertiary py-4 pt-0">
+        <div class="w-100 d-flex flex-column mb-4">
+            <div class="w-100 bg-primary py-1 text-center text-white"
+                style="background-color: var(--primary) !important; min-height:0px !important; z-index: 9999;">
+                <h6 class="text-center mx-auto mb-0 py-1 fsCounter" id="fsCounter">
+                    Memuat data...
+                </h6>
+            </div>
+            <div class="pt-4">
+                <div class="d-block d-md-none" style="position: absolute; left: 20px; top: 64px;">
+                    <button class="btn btn-light text-primary my-auto" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                <div class="container-fluid d-flex justify-content-center gap-4">
+                    <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.tentang') }}">Kenali
+                        Tsany</a>
+                    <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.kotak_aspirasi') }}">Kotak
+                        Aspirasi</a>
+                    <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.warta') }}">Warta</a>
+                    <a class="nav-link link logo mt-2" href="{{ url('') }}">
+                        <img src="{{ asset('new') }}/assets/img/logo.webp" width="120px" alt="">
+                    </a>
+                    <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.dukung_sakti') }}">Ambil
+                        Peran</a>
+                    <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.lapak') }}">Lapak Sakti</a>
+                    <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.visi_misi') }}">Program
+                        Kerja</a>
+                </div>
+            </div>
         </div>
     </nav>
     <main class="mb-5">
@@ -77,15 +91,17 @@
                                 Tsany</a>
                         </li>
                         <li class="list-group-item bg-transparent border-0 p-0">
-                            <a href="{{ url('') }}" class="text-dark" style="text-decoration: none;">Kotak
+                            <a href="{{ route('landing.kotak_aspirasi') }}" class="text-dark"
+                                style="text-decoration: none;">Kotak
                                 Aspirasi</a>
                         </li>
                         <li class="list-group-item bg-transparent border-0 p-0">
-                            <a href="{{ url('') }}" class="text-dark" style="text-decoration: none;">Warta</a>
+                            <a href="{{ route('landing.warta') }}" class="text-dark"
+                                style="text-decoration: none;">Warta</a>
                         </li>
                         <li class="list-group-item bg-transparent border-0 p-0">
                             <a href="{{ route('landing.dukung_sakti') }}" class="text-dark"
-                                style="text-decoration: none;">Dukung Sakti</a>
+                                style="text-decoration: none;">Ambil Peran</a>
                         </li>
                         <li class="list-group-item bg-transparent border-0 p-0">
                             <a href="{{ route('landing.lapak') }}" class="text-dark"
@@ -97,11 +113,12 @@
                 <div class="col-md-4 mb-5 ps-5">
                     <h6>Program Kerja</h6>
                     <ul class="list-group">
-                        <li class="list-group-item bg-transparent border-0 p-0">
-                            <a href="{{ route('landing.tentang') }}" class="text-dark"
-                                style="text-decoration: none;">Kenali
-                                Tsany</a>
-                        </li>
+                        @foreach (\App\VisiMisi::all() as $item)
+                            <li class="list-group-item bg-transparent border-0 p-0">
+                                <a href="{{ route('landing.visi_misi.detail', ['slug' => $item->slug]) }}"
+                                    class="text-dark" style="text-decoration: none;">{{ $item->title }}</a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -124,18 +141,21 @@
                         Tsany</a>
                 </li>
                 <li class="list-group-item border-0">
-                    <a href="{{ url('') }}" class="text-dark" style="text-decoration: none;">Program Kerja</a>
+                    <a href="{{ route('landing.visi_misi') }}" class="text-dark"
+                        style="text-decoration: none;">Program Kerja</a>
                 </li>
                 <li class="list-group-item border-0">
-                    <a href="{{ url('') }}" class="text-dark" style="text-decoration: none;">Kotak
+                    <a href="{{ route('landing.kotak_aspirasi') }}" class="text-dark"
+                        style="text-decoration: none;">Kotak
                         Aspirasi</a>
                 </li>
                 <li class="list-group-item border-0">
-                    <a href="{{ url('') }}" class="text-dark" style="text-decoration: none;">Warta</a>
+                    <a href="{{ route('landing.warta') }}" class="text-dark"
+                        style="text-decoration: none;">Warta</a>
                 </li>
                 <li class="list-group-item border-0">
                     <a href="{{ route('landing.dukung_sakti') }}" class="text-dark"
-                        style="text-decoration: none;">Dukung Sakti</a>
+                        style="text-decoration: none;">Ambil Peran</a>
                 </li>
                 <li class="list-group-item border-0">
                     <a href="{{ route('landing.lapak') }}" class="text-dark" style="text-decoration: none;">Lapak
@@ -187,6 +207,80 @@
                 },
             },
         });
+
+        window.onscroll = function() {
+
+            // pageYOffset or scrollY
+            console.log(window.pageYOffset)
+            if (window.pageYOffset > 200) {
+                if ($('#about'))
+                    $('#about').addClass('swipeIn')
+            } else {
+                // navbar.classList.remove('scrolled')
+            }
+        }
+    </script>
+
+    <script>
+        setInterval(function() {
+            // var endTime = new Date("29 September 2021 9:56:00 GMT+01:00");			
+            var endTime = new Date("<?= date(DATE_ATOM, strtotime('2024-02-14')) ?>");
+            endTime = (Date.parse(endTime) / 1000);
+            var now = new Date();
+            now = (Date.parse(now) / 1000);
+
+            var timeLeft = endTime - now;
+
+            if (timeLeft < 0) {
+                window.location.reload(true);
+                return;
+            }
+
+            var days = Math.floor(timeLeft / 86400);
+            var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+            var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600)) / 60);
+            var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+            let html = ""
+            // <span class="fsCounter1"></span><span class="fsCounter2"></span> Hari, <b>22:30:02</b> menuju
+            //         <b>Pemilu 2024 !</b>
+
+            if (days != 0) {
+
+                if (days < 10) {
+                    html += `<b>0${days}</b>`
+                } else {
+                    html += `<b>${days}</b>`
+                }
+                html += " Hari, "
+            }
+
+
+            if (hours < 10) {
+                html += `<b>0${hours}</b>`
+            } else {
+                html += `<b>${hours}</b>`
+
+            }
+            html += '<b>:</b>'
+
+            if (minutes < 10) {
+                html += `<b>0${minutes}</b>`
+            } else {
+                html += `<b>${minutes}</b>`
+            }
+            html += '<b>:</b>'
+
+            if (seconds < 10) {
+                html += `<b>0${seconds}</b>`
+            } else {
+                html += `<b>${seconds}</b>`
+            }
+
+            html += ' menuju <b>Pemilu 2024 !</b>'
+
+            var refreshTime = '';
+            document.getElementById("fsCounter").innerHTML = html
+        }, 1000);
     </script>
 </body>
 

@@ -13,6 +13,7 @@ class Aspirasi extends Model
     public $timestamps = true;
 
     const LINGKUP = [
+        '' => '',
         'Sarana Prasarana',
         'Akademik',
         'UKT',
@@ -26,6 +27,7 @@ class Aspirasi extends Model
     ];
 
     const SASARAN = [
+        '' => '',
         'DEWAN PERWAKILAN MAHASISWA UB',
         'EKSEKUTIF MAHASISWA UB',
         'Wakil Rektor Bidang Akademik',
