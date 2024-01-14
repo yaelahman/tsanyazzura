@@ -32,8 +32,8 @@
                     </button>
                 </div>
                 <div class="container-fluid d-flex justify-content-center gap-4">
-                    <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.tentang') }}">Kenali
-                        Tsany</a>
+                    <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.tentang') }}">Jejak
+                        Juang</a>
                     <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.kotak_aspirasi') }}">Kotak
                         Aspirasi</a>
                     <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.warta') }}">Warta</a>
@@ -43,8 +43,8 @@
                     <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.dukung_sakti') }}">Ambil
                         Peran</a>
                     <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.lapak') }}">Lapak Sakti</a>
-                    <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.visi_misi') }}">Program
-                        Kerja</a>
+                    <a class="nav-link link d-none mt-2 d-md-block" href="{{ route('landing.visi_misi') }}">Gagasan
+                        Sakti</a>
                 </div>
             </div>
         </div>
@@ -87,8 +87,7 @@
                     <ul class="list-group">
                         <li class="list-group-item bg-transparent border-0 p-0">
                             <a href="{{ route('landing.tentang') }}" class="text-dark"
-                                style="text-decoration: none;">Kenali
-                                Tsany</a>
+                                style="text-decoration: none;">Jejak Juang</a>
                         </li>
                         <li class="list-group-item bg-transparent border-0 p-0">
                             <a href="{{ route('landing.kotak_aspirasi') }}" class="text-dark"
@@ -111,7 +110,7 @@
                     </ul>
                 </div>
                 <div class="col-md-4 mb-5 ps-5">
-                    <h6>Program Kerja</h6>
+                    <h6>Gagasan Sakti</h6>
                     <ul class="list-group">
                         @foreach (\App\VisiMisi::all() as $item)
                             <li class="list-group-item bg-transparent border-0 p-0">
@@ -137,12 +136,12 @@
 
             <ul class="list-group list-custom rounded-0">
                 <li class="list-group-item border-0">
-                    <a href="{{ route('landing.tentang') }}" class="text-dark" style="text-decoration: none;">Kenali
-                        Tsany</a>
+                    <a href="{{ route('landing.tentang') }}" class="text-dark" style="text-decoration: none;">Jejak
+                        Juang</a>
                 </li>
                 <li class="list-group-item border-0">
                     <a href="{{ route('landing.visi_misi') }}" class="text-dark"
-                        style="text-decoration: none;">Program Kerja</a>
+                        style="text-decoration: none;">Gagasan Sakti</a>
                 </li>
                 <li class="list-group-item border-0">
                     <a href="{{ route('landing.kotak_aspirasi') }}" class="text-dark"
