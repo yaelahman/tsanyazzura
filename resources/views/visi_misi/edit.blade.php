@@ -33,6 +33,11 @@
                     @csrf
                     @method('put')
                     <div class="form-group">
+                        <label class="col-md-12 mb-0">Point</label>
+                        <input type="text" id="name" name="name" value="{{ $visi_misi->name }}" required
+                            placeholder="Point" class="form-control ps-0 form-control-line">
+                    </div>
+                    <div class="form-group">
                         <label class="col-md-12 mb-0">Judul</label>
                         <input type="text" id="title" name="title" value="{{ $visi_misi->title }}" required
                             placeholder="Judul" class="form-control ps-0 form-control-line">

@@ -50,7 +50,7 @@
                                 <div class="border-bottom d-flex justify-content-between">
                                     <div class="py-1">
                                         <h5 class="mb-0">MISI 0{{ $index + 1 }}</h5>
-                                        <p class="py-1 mb-0 text-xs">{{ $item->title }}</p>
+                                        <p class="py-1 mb-0 text-xs">{{ $item->name }}</p>
                                     </div>
                                     <div class="mb-auto">
                                         <a href="{{ route('landing.visi_misi.detail', ['slug' => $item->slug]) }}"

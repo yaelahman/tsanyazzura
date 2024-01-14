@@ -42,6 +42,7 @@
                         <thead>
                             <tr>
                                 <th class="border-top-0">No.</th>
+                                <th class="border-top-0">Point</th>
                                 <th class="border-top-0">Judul</th>
                                 <th class="border-top-0">Gambar</th>
                                 <th class="border-top-0">Action</th>
@@ -51,6 +52,7 @@
                             @foreach ($misi as $index => $row)
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
+                                    <td>{{ $row->name }}</td>
                                     <td>{{ $row->title }}</td>
                                     <td>
                                         <a class="btn btn-primary btn-sm btn-modal-image"

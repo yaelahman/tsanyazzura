@@ -26,7 +26,7 @@
                             style="background-color: #f4f6f7;">
                             <div class="d-flex">
                                 <span class="badge bg-primary me-2 " style="height: 20px">{{ $index + 1 }}</span>
-                                {{ $row->title }}
+                                {{ $row->name }}
                             </div>
                             <div class="mb-auto">
                                 <a href="{{ route('landing.visi_misi.detail', ['slug' => $row->slug]) }}"

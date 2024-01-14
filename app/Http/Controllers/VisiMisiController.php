@@ -49,7 +49,7 @@ class VisiMisiController extends Controller
             $visi_misi->name = $request->name ?? $request->title;
             $visi_misi->type = $request->type ?? 1;
             $visi_misi->title = $request->title;
-            $visi_misi->slug = Str::slug($request->title);
+            $visi_misi->slug = Str::slug($request->name);
             $visi_misi->text = $request->text;
             $format = $request->file('image')->getClientOriginalName();
             $name = Str::random(11);
@@ -114,7 +114,7 @@ class VisiMisiController extends Controller
             $visi_misi->name = $request->name ?? $request->title;
             $visi_misi->type = $request->type ?? 1;
             $visi_misi->title = $request->title;
-            $visi_misi->slug = Str::slug($request->title);
+            $visi_misi->slug = Str::slug($request->name);
             $visi_misi->text = $request->text;
             if ($request->hasFile('image')) {
                 $format = $request->file('image')->getClientOriginalName();

@@ -113,7 +113,7 @@
                                                 src="{{ asset('galeri') }}/{{ $item->image }}" alt="">
                                             <div class="card-product-image-text">
                                                 <h1 class="ps-0 mb-0">MISI 0{{ $index + 1 }}</h1>
-                                                <h6 class="text-start">{{ $item->title }}</h6>
+                                                <h6 class="text-start">{{ $item->name }}</h6>
                                             </div>
                                             <div class="card-product-blur"></div>
                                         </div>

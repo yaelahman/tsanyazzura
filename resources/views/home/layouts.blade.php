@@ -115,7 +115,7 @@
                         @foreach (\App\VisiMisi::all() as $item)
                             <li class="list-group-item bg-transparent border-0 p-0">
                                 <a href="{{ route('landing.visi_misi.detail', ['slug' => $item->slug]) }}"
-                                    class="text-dark" style="text-decoration: none;">{{ $item->title }}</a>
+                                    class="text-dark" style="text-decoration: none;">{{ $item->name }}</a>
                             </li>
                         @endforeach
                     </ul>
