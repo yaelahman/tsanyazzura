@@ -23,6 +23,7 @@ class DukungSakti extends Model
         'tps',
         'alamat',
         'rt',
-        'rw'
+        'rw',
+        'nik'
     ];
 }
