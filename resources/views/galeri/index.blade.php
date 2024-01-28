@@ -3,7 +3,7 @@
     <div class="page-breadcrumb">
         <div class="row align-items-center">
             <div class="col-md-6 col-8 align-self-center">
-                <h3 class="page-title mb-0 p-0">Banner</h3>
+                <h3 class="page-title mb-0 p-0">Warta</h3>
                 <div class="d-flex align-items-center">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -17,7 +17,7 @@
                 <div class="text-end upgrade-btn">
                     <a href="{{ route('galeri.create') }}" class="btn btn-success d-none d-md-inline-block text-white">
                         <i class="fas fa-plus"></i>&nbsp;
-                        Add Galeri</a>
+                        Add Warta</a>
                 </div>
             </div>
         </div>
@@ -36,13 +36,13 @@
         @endif
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title mb-3">Data Galeri</h4>
+                <h4 class="card-title mb-3">Data Warta</h4>
                 <div class="table-responsive">
                     <table id="datatable1" class="table user-table no-wrap">
                         <thead>
                             <tr>
                                 <th class="border-top-0">No.</th>
-                                <th class="border-top-0" width="10%">Image Galeri</th>
+                                <th class="border-top-0" width="10%">Image</th>
                                 <th class="border-top-0">Title</th>
                                 <th class="border-top-0">Text</th>
                                 <th class="border-top-0">Action</th>

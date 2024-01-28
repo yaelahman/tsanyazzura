@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\ProgramKerja;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class ProgramKerjaController extends Controller
 {
@@ -45,8 +46,16 @@ class ProgramKerjaController extends Controller
         DB::beginTransaction();
         try {
             $program_kerja = new ProgramKerja();
-            $program_kerja->name = $request->name;
-            // $program_kerja->status = 1;
+            $program_kerja->name = $request->name ?? $request->title;
+            $program_kerja->title = $request->title;
+            $program_kerja->slug = Str::slug($request->name);
+            $program_kerja->text = $request->text;
+            $format = $request->file('image')->getClientOriginalName();
+            $name = Str::random(11);
+            $newName = $name . $format;
+            $request->file('image')->move(public_path() . '/galeri', $newName);
+            $program_kerja->image = $newName;
+
 
             if ($program_kerja->save()) {
                 $request->session()->flash('alert', 'success');
@@ -101,7 +110,17 @@ class ProgramKerjaController extends Controller
         DB::beginTransaction();
         try {
             $program_kerja = ProgramKerja::find($id);
-            $program_kerja->name = $request->name;
+            $program_kerja->name = $request->name ?? $request->title;
+            $program_kerja->title = $request->title;
+            $program_kerja->slug = Str::slug($request->name);
+            $program_kerja->text = $request->text;
+            if ($request->hasFile('image')) {
+                $format = $request->file('image')->getClientOriginalName();
+                $name = Str::random(11);
+                $newName = $name . $format;
+                $request->file('image')->move(public_path() . '/galeri', $newName);
+                $program_kerja->image = $newName;
+            }
             // $program_kerja->status = 1;
 
             if ($program_kerja->save()) {

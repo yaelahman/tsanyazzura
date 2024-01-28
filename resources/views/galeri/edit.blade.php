@@ -1,4 +1,7 @@
 @extends('layouts/app')
+@section('css')
+    <link rel="stylesheet" href="{{ asset('assets/plugins/summernote/summernote-bs4.min.css') }}">
+@endsection
 @section('content')
     <div class="page-breadcrumb">
         <div class="row align-items-center">
@@ -35,15 +38,15 @@
                         <div class="col-sm-6 mt-3">
                             <div class="form-group">
                                 <label for="">Title</label>
-                                <input type="text" name="title" id="title" value="{{ $galeri->title }}" class="form-control" placeholder="1"
-                                    required>
+                                <input type="text" name="title" id="title" value="{{ $galeri->title }}"
+                                    class="form-control" placeholder="1" required>
                             </div>
                         </div>
                         <div class="col-sm-6 mt-3">
                             <div class="form-group">
                                 <label for="">Text</label>
-                                <input type="text" name="text" id="text" value="{{ $galeri->text }}" class="form-control" placeholder="1"
-                                    required>
+                                <input type="text" name="text" id="text" value="{{ $galeri->text }}"
+                                    class="form-control" placeholder="1" required>
                             </div>
                         </div>
                         <div class="col-sm-6 mt-3">
@@ -56,11 +59,16 @@
                         </div>
                         <div class="col-sm-6 mt-3">
                             <div class="btn-group">
-                                <a href="{{ asset('galeri/' . $galeri->image) }}"
-                                    class="btn btn-info mt-3 lihat-gambar-1" target="_blank"><i
-                                        class="fas fa-eye"></i>&nbsp;Lihat
+                                <a href="{{ asset('galeri/' . $galeri->image) }}" class="btn btn-info mt-3 lihat-gambar-1"
+                                    target="_blank"><i class="fas fa-eye"></i>&nbsp;Lihat
                                     Gambar</a>
                                 &nbsp;
+                            </div>
+                        </div>
+                        <div class="col-sm-12 mt-3">
+                            <div class="form-group">
+                                <label for="">Isi Warta</label>
+                                <textarea name="body" cols="30" rows="30" class="form-control" required>{{ $visi_misi->body }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -75,7 +83,12 @@
     </div>
 @endsection
 @section('script')
+    <script src="{{ asset('assets/plugins/summernote/summernote-bs4.min.js') }}"></script>
     <script type="text/javascript">
+        $(document).ready(() => {
+            $('textarea').summernote();
+        })
+
         function preview(index) {
             console.log(event.target.files)
             $('.lihat-gambar-' + index).removeClass('d-none')

@@ -64,12 +64,14 @@ class GaleriController extends Controller
             $request->file('image')->move(public_path() . '/galeri', $newName);
             $galeri->image = $newName;
             $galeri->title = $request->title;
+            $galeri->slug = Str::slug($request->title);
             $galeri->text = $request->text;
+            $galeri->body = $request->body;
 
             if ($galeri->save()) {
 
                 $request->session()->flash('alert', 'success');
-                $request->session()->flash('message', 'Galeri created successfully');
+                $request->session()->flash('message', 'Warta created successfully');
 
                 DB::commit();
                 return redirect()->to(route('galeri.index'));
@@ -132,12 +134,14 @@ class GaleriController extends Controller
                 $galeri->image = $newName;
             }
             $galeri->title = $request->title;
+            $galeri->slug = Str::slug($request->title);
             $galeri->text = $request->text;
+            $galeri->body = $request->body;
 
             if ($galeri->save()) {
 
                 $request->session()->flash('alert', 'success');
-                $request->session()->flash('message', 'Galeri updated successfully');
+                $request->session()->flash('message', 'Warta updated successfully');
 
                 DB::commit();
                 return redirect()->to(route('galeri.index'));
@@ -160,7 +164,7 @@ class GaleriController extends Controller
 
         if ($galeri->delete()) {
             $request->session()->flash('alert', 'success');
-            $request->session()->flash('message', 'Galeri deleted successfully');
+            $request->session()->flash('message', 'Warta deleted successfully');
             return redirect()->to(route('galeri.index'));
         }
     }

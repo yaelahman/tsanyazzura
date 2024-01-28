@@ -11,6 +11,10 @@ body {
     overflow-x: hidden;
 }
 
+.page {
+    font-family: Inter !important;
+}
+
 .navbar {
     background-color: white !important;
     min-height: 80px;
@@ -50,6 +54,18 @@ body {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
+
+.card-proker {
+    transition: all;
+    transition-duration: 300ms;
+}
+
+.card-proker:hover {
+    background-color: #0053A3 !important;
+    color: white !important;
+}
+
 
 @keyframes fadeInAnimation {
     0% {
@@ -223,6 +239,23 @@ body {
     max-width: 100%;
     height: 300px !important;
     cursor: pointer;
+}
+
+.card-img-warta {
+    overflow: hidden;
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 4/6;
+    max-width: 100%;
+    height: 300px !important;
+    cursor: pointer;
+    transition: transform;
+    transition-duration: 300ms;
+}
+
+.card-warta:hover>.card-img-warta {
+    transform: scale(1.1);
 }
 
 .card-product-image {

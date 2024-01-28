@@ -11,7 +11,7 @@
     <meta name="description"
         content="Monster Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>Market App</title>
+    <title>Raihan Tsany Admin</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/monster-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/template/assets/images/favicon.png">
@@ -158,7 +158,7 @@
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                     href="{{ route('galeri.index') }}" aria-expanded="false"><i
                                         class="me-3 fa fa-table" aria-hidden="true"></i><span
-                                        class="hide-menu">Galeri</span></a></li>
+                                        class="hide-menu">Warta</span></a></li>
 
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                     href="{{ route('tim.index') }}" aria-expanded="false"><i class="me-3 fa fa-table"

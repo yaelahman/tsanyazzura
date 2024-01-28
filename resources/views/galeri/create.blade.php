@@ -1,4 +1,7 @@
 @extends('layouts/app')
+@section('css')
+    <link rel="stylesheet" href="{{ asset('assets/plugins/summernote/summernote-bs4.min.css') }}">
+@endsection
 @section('content')
     <div class="page-breadcrumb">
         <div class="row align-items-center">
@@ -39,7 +42,7 @@
                         </div>
                         <div class="col-sm-6 mt-3">
                             <div class="form-group">
-                                <label for="">Text</label>
+                                <label for="">Text Pendek</label>
                                 <input type="text" name="text" id="text" class="form-control" placeholder="1"
                                     required>
                             </div>
@@ -60,6 +63,12 @@
                                 &nbsp;
                             </div>
                         </div>
+                        <div class="col-sm-12 mt-3">
+                            <div class="form-group">
+                                <label for="">Isi Warta</label>
+                                <textarea name="body" cols="30" rows="30" class="form-control" required></textarea>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group mt-3">
                         <div class="col-sm-12 d-flex">
@@ -72,7 +81,12 @@
     </div>
 @endsection
 @section('script')
+    <script src="{{ asset('assets/plugins/summernote/summernote-bs4.min.js') }}"></script>
     <script type="text/javascript">
+        $(document).ready(() => {
+            $('textarea').summernote();
+        })
+
         function preview(index) {
             console.log(event.target.files)
             $('.lihat-gambar-' + index).removeClass('d-none')

@@ -1,8 +1,10 @@
 <?php
 
+use App\Galeri;
+use App\ProgramKerja;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +21,24 @@ Route::get('/', 'LandingController@index')->name('landing');
 Route::get('/tentang', 'LandingController@tentang')->name('landing.tentang');
 Route::get('/visi-misi', 'LandingController@visiMisi')->name('landing.visi_misi');
 Route::get('/visi-misi/{slug}', 'LandingController@visiMisiDetail')->name('landing.visi_misi.detail');
+Route::get('/program-kerja/{slug}', 'LandingController@programKerjaDetail')->name('landing.program_kerja.detail');
 Route::get('/kotak-aspirasi', 'LandingController@kotakAspirasi')->name('landing.kotak_aspirasi');
 Route::post('/kotak-aspirasi', 'AspirasiController@store')->name('landing.kotak_aspirasi.store');
 Route::get('/warta', 'LandingController@warta')->name('landing.warta');
+Route::get('/warta/{slug}', 'LandingController@wartaDetail')->name('landing.warta.detail');
+Route::get('generate-slug', function () {
+    $data = Galeri::all();
+    foreach ($data as $row) {
+        $row->slug = Str::slug($row->title);
+        $row->save();
+    }
+    $data = ProgramKerja::all();
+    foreach ($data as $row) {
+        $row->title = $row->name;
+        $row->slug = Str::slug($row->title);
+        $row->save();
+    }
+});
 Route::get('/tim', 'LandingController@tim')->name('landing.tim');
 Route::get('/lapak', 'LandingController@lapak')->name('landing.lapak');
 Route::get('/lapak/{id}', 'LandingController@lapakDetail')->name('landing.lapak_detail');

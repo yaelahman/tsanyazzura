@@ -22,18 +22,20 @@
 
                 <ul class="list-group mb-0 px-3">
                     @foreach ($misi as $index => $row)
-                        <li class="mb-2 list-group-item d-md-flex justify-content-between align-items-center border-0 mb-0 rounded"
-                            style="background-color: #f4f6f7;">
-                            <div class="d-flex">
-                                <span class="badge bg-primary me-2 " style="height: 20px">{{ $index + 1 }}</span>
-                                {{ $row->name }}
-                            </div>
-                            <div class="mb-auto">
-                                <a href="{{ route('landing.visi_misi.detail', ['slug' => $row->slug]) }}"
-                                    class="btn btn-sm btn-primary text-nowrap"><i class="fas fa-arrow-right"></i> Lihat
-                                    Selengkapnya</a>
-                            </div>
-                        </li>
+                        <a href="{{ route('landing.visi_misi.detail', ['slug' => $row->slug]) }}"
+                            class="text-decoration-none">
+                            <li class="mb-2 card-proker list-group-item d-md-flex justify-content-between align-items-center border-0 mb-0 rounded"
+                                style="background-color: #f4f6f7;">
+                                <div class="d-flex">
+                                    <span class="badge bg-primary me-2 rounded-pill"
+                                        style="height: 20px; width:20px">{{ $index + 1 }}</span>
+                                    <div class="d-flex flex-column">
+                                        <h5 class="mb-0 fw-bold">{{ $row->name }}</h5>
+                                        <h6 class="mb-0 fw-normal">{{ $row->title }}</h6>
+                                    </div>
+                                </div>
+                            </li>
+                        </a>
                     @endforeach
                 </ul>
             </div>
@@ -42,11 +44,20 @@
 
                 <ul class="list-group mb-0 px-3">
                     @foreach ($program_kerja as $index => $row)
-                        <li class="mb-2 list-group-item d-flex align-items-center border-0 mb-0 rounded"
-                            style="background-color: #f4f6f7;">
-                            <span class="badge bg-primary me-2">{{ $index + 1 }}</span>
-                            {{ $row->name }}
-                        </li>
+                        <a href="{{ route('landing.program_kerja.detail', ['slug' => $row->slug]) }}"
+                            class="text-decoration-none">
+                            <li class="mb-2 card-proker list-group-item d-md-flex justify-content-between align-items-center border-0 mb-0 rounded"
+                                style="background-color: #f4f6f7;">
+                                <div class="d-flex">
+                                    <span class="badge bg-primary me-2 rounded-pill"
+                                        style="height: 20px; width:20px">{{ $index + 1 }}</span>
+                                    <div class="d-flex flex-column">
+                                        <h5 class="mb-0 fw-bold">{{ $row->name }}</h5>
+                                        <h6 class="mb-0 fw-normal">{{ $row->title }}</h6>
+                                    </div>
+                                </div>
+                            </li>
+                        </a>
                     @endforeach
                 </ul>
             </div>

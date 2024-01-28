@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Banner;
 use App\Category;
 use App\FAQ;
+use App\Galeri;
 use App\Models\DukungSakti;
 use App\Product;
+use App\ProgramKerja;
 use App\Settings;
 use App\VisiMisi;
 use Illuminate\Http\Request;
@@ -88,6 +90,27 @@ class LandingController extends Controller
         return view('home.visi_misi_detail', $data);
     }
 
+    public function programKerjaDetail(Request $request, $slug)
+    {
+        $settings = [];
+        foreach (Settings::all() as $set) {
+            $settings[$set->name] = $set->text;
+        }
+
+        $misi = ProgramKerja::where('slug', $slug)->firstOrFail();
+
+
+        $data = [
+            'settings' => $settings,
+            'detail' => false,
+            'active' => 'program-kerja',
+            'misi' => $misi,
+            'allMisi' => ProgramKerja::orderBy('id', 'asc')->get()
+        ];
+
+        return view('home.program_kerja_detail', $data);
+    }
+
     public function kotakAspirasi(Request $request)
     {
         $settings = [];
@@ -118,10 +141,28 @@ class LandingController extends Controller
             'settings' => $settings,
             'detail' => false,
             'active' => 'warta',
-            'galeri' => \App\Galeri::all()
+            'galeri' => \App\Galeri::orderBy('id', 'desc')->get()
         ];
 
         return view('home.warta', $data);
+    }
+
+    public function wartaDetail(Request $request, $slug)
+    {
+        $settings = [];
+        foreach (Settings::all() as $set) {
+            $settings[$set->name] = $set->text;
+        }
+
+        $data = [
+            'settings' => $settings,
+            'detail' => false,
+            'active' => 'warta',
+            'warta' => \App\Galeri::where('slug', $slug)->firstOrFail(),
+            'allWarta' => Galeri::where('slug', '!=', $slug)->get()
+        ];
+
+        return view('home.warta_detail', $data);
     }
 
     public function tim(Request $request)

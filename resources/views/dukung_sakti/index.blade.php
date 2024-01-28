@@ -1,4 +1,7 @@
 @extends('layouts/app')
+@section('style')
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
+@endsection
 @section('content')
     <div class="page-breadcrumb">
         <div class="row align-items-center">
@@ -31,7 +34,7 @@
             <div class="card-body">
                 <h4 class="card-title mb-3">Data Pendukung</h4>
                 <div class="table-responsive">
-                    <table id="datatable1" class="table user-table no-wrap">
+                    <table id="example" class="table user-table no-wrap">
                         <thead>
                             <tr>
                                 <th class="border-top-0">No.</th>
@@ -87,7 +90,27 @@
     </div>
 @endsection
 @section('script')
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
     <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example').DataTable({
+                dom: 'Bfrtip',
+                buttons: [{
+                    extend: 'excel',
+                    title: 'Data Pendukung Raihan Tsany',
+                    exportOptions: {
+                        columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+                    }
+                }]
+            });
+            $('.buttons-excel').addClass('btn btn-success').html('Download Excel')
+        });
+
         $('.button-delete').click(function() {
             var id = $(this).attr('data-id');
             var form = $('#form-delete');
