@@ -34,7 +34,7 @@
                                         <p class="py-1 mb-0 text-xs">{{ $item->name }}</p>
                                     </div>
                                     <div class="mb-auto">
-                                        <a href="{{ route('landing.visi_misi.detail', ['slug' => $item->slug]) }}"
+                                        <a href="{{ route('landing.program_kerja.detail', ['slug' => $item->slug]) }}"
                                             class="btn btn-primary btn-sm rounded-4 text-nowrap mt-2">
                                             <i class="fas fa-scroll"></i> Detail
                                         </a>
