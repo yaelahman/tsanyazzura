@@ -68,7 +68,7 @@
                         <div class="col-sm-12 mt-3">
                             <div class="form-group">
                                 <label for="">Isi Warta</label>
-                                <textarea name="body" cols="30" rows="30" class="form-control" required>{{ $visi_misi->body }}</textarea>
+                                <textarea name="body" cols="30" rows="30" class="form-control" required>{{ $galeri->body }}</textarea>
                             </div>
                         </div>
                     </div>

@@ -33,7 +33,8 @@
                         <div class="card-body border-0">
                             @foreach ($allWarta as $index => $item)
                                 <div class="mb-2">
-                                    <a class="text-decoration-none" href="">
+                                    <a class="text-decoration-none"
+                                        href="{{ route('landing.warta.detail', ['slug' => $item->slug]) }}">
                                         {{ $item->title }}
                                     </a>
                                 </div>
