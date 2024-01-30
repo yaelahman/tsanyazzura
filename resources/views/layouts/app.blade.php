@@ -163,6 +163,11 @@
                                         class="hide-menu">Warta</span></a></li>
 
                             <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                    href="{{ route('tentang.index') }}" aria-expanded="false"><i
+                                        class="me-3 fa fa-table" aria-hidden="true"></i><span
+                                        class="hide-menu">Tentang</span></a></li>
+
+                            <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                     href="{{ route('tim.index') }}" aria-expanded="false"><i class="me-3 fa fa-table"
                                         aria-hidden="true"></i><span class="hide-menu">Tim</span></a></li>
 

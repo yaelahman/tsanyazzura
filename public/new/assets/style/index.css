@@ -430,3 +430,29 @@ footer {
     border-radius: 12px;
     font-size: 14px;
 }
+
+.komite .row .col .d-flex {
+    transition: all;
+    transition-duration: 150ms;
+    cursor: pointer;
+}
+
+.komite .row .col .d-flex:hover {
+    background-color: #0053A3 !important;
+    color: white;
+    transform: scale(1.03);
+}
+
+.bg-primary {
+    background-color: #0053A3 !important;
+}
+
+.text-primary {
+    color: #0053A3 !important;
+}
+
+.text-gradient {
+    background: -webkit-linear-gradient(315deg, #0053A3 0%, #0013a3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

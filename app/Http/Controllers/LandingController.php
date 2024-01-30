@@ -6,12 +6,15 @@ use App\Banner;
 use App\Category;
 use App\FAQ;
 use App\Galeri;
+use App\Mail\DukungSaktiMail;
 use App\Models\DukungSakti;
+use App\Models\Tentang;
 use App\Product;
 use App\ProgramKerja;
 use App\Settings;
 use App\VisiMisi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class LandingController extends Controller
 {
@@ -41,6 +44,14 @@ class LandingController extends Controller
 
         $data = [
             'settings' => $settings,
+            'biografi' => Tentang::where('category', 'BIOGRAFI')->first() ?? new Tentang(),
+            'pendidikan' => Tentang::where('category', 'PENDIDIKAN')->get(),
+            'organisasi' => Tentang::where('category', 'ORGANISASI')->get(),
+            'komite' => Tentang::where('category', 'KOMITE')->get(),
+            'riwayat_pelatihan' => Tentang::where('category', 'RIWAYAT_PELATIHAN')->get(),
+            'riwayat_pembicara' => Tentang::where('category', 'RIWAYAT_PEMBICARA')->get(),
+            'prestasi' => Tentang::where('category', 'PRESTASI')->get(),
+            'prestasi_badge' => Tentang::where('category', 'PRESTASI')->whereNotNull('text')->orderBy('text')->get(),
             'detail' => false,
             'active' => 'tentang'
         ];
@@ -285,7 +296,15 @@ class LandingController extends Controller
 
     public function dukungSaktiStore(Request $request)
     {
-        DukungSakti::create($request->all());
+        foreach (Settings::all() as $set) {
+            $settings[$set->name] = $set->text;
+        }
+        $save = DukungSakti::create($request->all());
+        $payload = [
+            'row' => $save
+        ];
+        Mail::to($settings['email'])->send(new DukungSaktiMail($payload));
+
         return redirect()->to(route('landing.dukung_sakti.success'));
     }
 }

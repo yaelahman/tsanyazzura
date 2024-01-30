@@ -68,6 +68,7 @@ Route::prefix('/admin')->group(function () {
         Route::post('/product/image', 'ProductController@ImageProduct')->name('product.image');
         Route::post('/product/status/{id}', 'ProductController@status');
 
+        Route::resource('/tentang', 'TentangController');
         Route::resource('/banner', 'BannerController');
         Route::resource('/galeri', 'GaleriController');
         Route::resource('/tim', 'TimController');
