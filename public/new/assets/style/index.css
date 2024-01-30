@@ -431,6 +431,7 @@ footer {
     font-size: 14px;
 }
 
+
 .komite .row .col .d-flex {
     transition: all;
     transition-duration: 150ms;
@@ -451,8 +452,60 @@ footer {
     color: #0053A3 !important;
 }
 
-.text-gradient {
-    background: -webkit-linear-gradient(315deg, #0053A3 0%, #0013a3 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+#fokus-isu {
+    width: 400px;
+    height: 400px;
+    border: 10px solid #3073b3;
+    border-radius: 50%;
+    position: relative;
+}
+
+.fokus-1 {
+    cursor: pointer;
+    position: absolute;
+    top: -10px;
+    left: 80px;
+    font-size: 20px;
+    background-color: #0053A3;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+}
+
+.fokus-2 {
+    cursor: pointer;
+    position: absolute;
+    top: 160px;
+    left: -100px;
+    font-size: 20px;
+    background-color: #0053A3;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+}
+
+.fokus-3 {
+    cursor: pointer;
+    position: absolute;
+    top: 160px;
+    right: -100px;
+    font-size: 20px;
+    background-color: #0053A3;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+}
+
+
+.fokus-4 {
+    cursor: pointer;
+    position: absolute;
+    bottom: -30px;
+    left: 10px;
+    font-size: 20px;
+    background-color: #0053A3;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    white-space: nowrap;
 }

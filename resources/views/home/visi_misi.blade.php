@@ -61,6 +61,26 @@
                     @endforeach
                 </ul>
             </div>
+            <div class="row mb-4">
+                <h3 class="text-center text-primary mb-3">Fokus Isu</h3>
+
+                <div id="fokus-isu" class="mx-auto">
+                    <div class="fokus-1 text-center"><span class="bg-white rounded-circle px-2 fs-5 text-primary">1</span>
+                        <br> [Daya
+                        berdaya
+                        SAKTI]
+                    </div>
+                    <div class="fokus-2 text-center"><span class="bg-white rounded-circle px-2 fs-5 text-primary">2</span>
+                        <br> [Daya kembang SAKTI]
+                    </div>
+                    <div class="fokus-3 text-center"><span class="bg-white rounded-circle px-2 fs-5 text-primary">3</span>
+                        <br> [Daya Tumbuh SAKTI]
+                    </div>
+                    <div class="fokus-4 text-center"><span class="bg-white rounded-circle px-2 fs-5 text-primary">4</span>
+                        <br> [Daya Inklusif dan kolaborasi SAKTI]
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- container -->
     </section>
