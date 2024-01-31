@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Aspirasi;
+use App\Mail\AspirasiMail;
+use App\Settings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class AspirasiController extends Controller
@@ -50,6 +53,13 @@ class AspirasiController extends Controller
             }
 
             $aspirasi->save();
+            foreach (Settings::all() as $set) {
+                $settings[$set->name] = $set->text;
+            }
+            $payload = [
+                'row' => $aspirasi
+            ];
+            Mail::to($settings['email'])->send(new AspirasiMail($payload));
             DB::commit();
 
             return redirect()->back();

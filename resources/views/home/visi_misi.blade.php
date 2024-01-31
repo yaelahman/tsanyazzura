@@ -62,6 +62,207 @@
                 </ul>
             </div>
             <div class="row mb-4">
+                <h3 class="text-center text-primary mb-3">ALUR PROGRAM DAYA JUANG SAKTI ASPIRATIF</h3>
+
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Penjelasan Aspirasi
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>&nbsp;&nbsp;Alur program penjaringan aspirasi ini diawali dengan
+                                    penjemputan aspirasi kepada Masyarakat Kota Blitar/konstituen.
+                                    Program penjaringan ini dilaksanakan melalui 2 metode yaitu metode
+                                    offline (tatap muka/pertemuan/dialog) dimana DPRD mendatangi
+                                    secara langsung Masyarakat Kota Blitar untuk berdiskusi mengenai
+                                    permasalahan yang ada sehingga permasalahan tersebut diketahui
+                                    langsung oleh wakil rakyat. Metode kedua yaitu metode online
+                                    dimana nanti akan memanfaatkan platform website, gform, dan
+                                    whatsapp. Metode online ini guna mendukung percepatan
+                                    penyerapan aspirasi dimana era saat ini sudah memasuki era digital
+                                    untuk meningkatkan tingkat efektifitas dan efisiensi. Selain untuk
+                                    meningkatkan efektifitas dan efisiensi, adanya platform yang
+                                    disediakan untuk serap aspirasi online ini mendukung adanya serap
+                                    aspirasi secara konvensional (offline) guna menyongsong era
+                                    digitalisasi pelayanan publik di Kota Blitar.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Pengkajian Regulasi
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>&nbsp;&nbsp;Hal yang selanjutnya dilakukan adalah pengkajian regulasi
+                                    yang meliputi formulasi regulasi untuk penyelesaian permasalahan
+                                    yang ada di Kota Blitar. DPRD Kota Blitar sebagai lembaga legislasi
+                                    sudah seharusnya mengeluarkan/membentuk regulasi yang sesuai
+                                    dengan permasalahan prioritas di Kota Blitar untuk terus berbenah.
+                                    Tentunya permasalahan prioritas tersebut menjadi fokus utama
+                                    pembangunan Kota Blitar melelui pembentukan regulasi yang
+                                    26
+                                    berpihak kepada Masyarakat Kota Blitar. Bukan hanya formulasi
+                                    regulasi, DPRD Kota Blitar juga harus peka terhadap regulasi yang
+                                    sudah tidak relevan dengan keadaan saat ini, hal ini bisa dilakukan
+                                    dengan melakukan reformulasi regulasi yang berkoordinasi dengan
+                                    pihak terkait untuk pelaksanaan kebijakan yang lebih efektif dan
+                                    efisien.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Pembahasan Anggaran
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>&nbsp;&nbsp;Setelah mendapat persetujuan oleh Dewan selanjutnya akan
+                                    diadakan rapat pembahasan dengan OPD terkait untuk membahas
+                                    mengenai program, anggaran, dan kelompok sasaran kebijakan
+                                    tersebut. Hal ini merupakan satu hal yang sangat penting karena
+                                    program, anggaran, dan kelompok sasaran kebijakan harus dibahas
+                                    secara intensif demi efektifitas kebijakan yang akan diberlakukan.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#c4" aria-expanded="false" aria-controls="c4">
+                                Realisasi Program
+                            </button>
+                        </h2>
+                        <div id="c4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>&nbsp;&nbsp;Selanjutnya setelah program, anggaran, dan kelompok
+                                    sasaran telah disepakati/disetujui maka akan ada realisasi
+                                    kebijakan. Dengan adanya perencanaan yang matang maka
+                                    realisasi kebijakan ini dapat berjalan secara maksimal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#c5" aria-expanded="false" aria-controls="c5">
+                                Pengawasan
+                            </button>
+                        </h2>
+                        <div id="c5" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>&nbsp;&nbsp;Dalam tahapan ini DPRD Kota Blitar harus melaksakan fungsi
+                                    pengawasan dengan maksimal. hal yang pertama harus dilakukan
+                                    adalah memahami ruang lingkup pengawasan dalam pelaksanaan
+                                    kebijakan oleh DPRD Kota Blitar. Sebagaimana diamanatkan
+                                    UndangUndang Republik Indonesia Nomor 17 Tahun 2014 adalah
+                                    melaksanakan pengawasan terhadap pelaksanaan peraturan
+                                    daerah dan Anggaran Pendapatan dan Belanja Daerah (APBD),
+                                    27
+                                    yang telah dibuat bersama dengan Kepala Daerah. Di dalam
+                                    penjelasan umum undang undang tersebut diterangkan bahwa
+                                    pengawasan terhadap pengelolaan APBD yang dilakukan oleh
+                                    DPRD merupakan hak setiap anggota DPRD dalam rangka
+                                    memperjuangkan kepentingan Masyarakat Kota Blitar, termasuk di
+                                    daerah pemilihannya.
+
+                                </p>
+                                <p>&nbsp;&nbsp;Preliminary Control, Interim Control, dan Post Control adalah
+                                    konsep dalam manajemen kontrol yang merujuk pada tahapantahapan pengendalian dalam
+                                    siklus manajemen. Berikut adalah
+                                    penjelasan singkat untuk setiap konsep tersebut:
+                                </p>
+                                <h6 class="fw-bold">a. Preliminary Control:</h6>
+                                <p>
+                                    &nbsp;&nbsp;Preliminary control merujuk pada tindakan pengendalian yang dilakukan
+                                    sebelum suatu
+                                    kegiatan dimulai atau proyek dimasuki tahap utama.
+                                    Serta mencegah kemungkinan masalah dan kesalahan sejak awal. Memberikan kerangka kerja
+                                    dan parameter awal untuk memastikan bahwa suatu kegiatan
+                                    atau proyek dapat berjalan sesuai rencana.
+                                </p>
+                                <p>&nbsp;&nbsp;Contoh: Penetapan aturan, kebijakan, dan pedoman awal, perencanaan risiko,
+                                    dan penilaian
+                                    ketersediaan sumber daya.</p>
+
+                                <h6 class="fw-bold">b. Interim Control:</h6>
+                                <p>
+                                    &nbsp;&nbsp;Interim control terjadi selama pelaksanaan suatu kegiatan atau proyek, di
+                                    antara tahap
+                                    awal dan penyelesaian. Memastikan bahwa proyek atau kegiatan
+                                    tetap sesuai dengan rencana, mengidentifikasi masalah atau deviasi segera, dan mengambil
+                                    tindakan korektif sebelum masalah menjadi lebih besar.
+                                </p>
+                                <p>&nbsp;&nbsp;Pemantauan berkala terhadap progres proyek, analisis varian antara rencana
+                                    dan kinerja
+                                    aktual, dan peninjauan rutin.</p>
+
+                                <h6 class="fw-bold">c. Post Control:</h6>
+                                <p>
+                                    &nbsp;&nbsp;Post control terjadi setelah suatu kegiatan atau proyek selesai. Ini
+                                    melibatkan evaluasi
+                                    kinerja dan pembelajaran dari pengalaman untuk perbaikan di
+                                    masa depan. Menganalisis keseluruhan hasil dan kinerja, mengidentifikasi pembelajaran
+                                    yang dapat diambil, dan menyusun rekomendasi atau perbaikan
+                                    untuk proyek atau kegiatan berikutnya.
+                                </p>
+                                <p>&nbsp;&nbsp;Audit pasca-proyek, analisis return on investment (ROI), dan pembuatan
+                                    laporan evaluasi.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#c6" aria-expanded="false" aria-controls="c6">
+                                Transparansi SAKTI
+                            </button>
+                        </h2>
+                        <div id="c6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>&nbsp;&nbsp;Tahapan akhir dalam program ini adalah adanya akuntabilitas
+                                    dan transparansi yang dipublikasi kepada Masyarakat Kota Blitar
+                                    mengenai kebijakan yang telah dijalankan. Adanya transparansi ini
+                                    diharapkan mampu meningkatkan tingkat kepercayaan Masyarakat
+                                    Kota Blitar kepada lembaga pemerintah daerah yang juga dilibatkan
+                                    sebagai subjek pembangunan dengan mekanisme bottom up.</p>
+                                <p>&nbsp;&nbsp;Permasalahan di tiaptiap klaster/bidang harus berangkat dari
+                                    aspirasi Masyarakat Kota Blitar. Aspirasi tersebut dikaji oleh DPRD
+                                    berdasarkan regulasi (terutama Peraturan Daerah/Peraturan Wali
+                                    Kota). Aspirasi yang diterima harus diperkuat oleh legal
+                                    standing/dasar hukum beserta anggaran daerah yang disetujui oleh
+                                    DPRD. Aspirasi yang diwujudkan dalam bentuk program daerah
+                                    akan lebih baik apabila bersifat timbal balik yaitu menambah
+                                    income/pendapatan asli daerah (PAD). Selanjutnya,aspirasi yang
+                                    diwujudkan dalam bentuk program daerah yang didukung dengan
+                                    anggaran daerah maka harus direalisasikan secara transparan
+                                    dengan pengawasan yang melibatkan Masyarakat Kota Blitar.
+                                    Sehingga tercipta sistem Pemerintah Kota Blitar yang baik dan
+                                    bersih.
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
                 <h3 class="text-center text-primary mb-3">Fokus Isu</h3>
 
                 <div id="fokus-isu" class="mx-auto">
