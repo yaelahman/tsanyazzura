@@ -88,172 +88,172 @@
         </div>
         <!-- container -->
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalFokus1" tabindex="-1" aria-labelledby="modalFokus1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-4">
+                <div class="modal-header border-0">
+                    <h1 class="modal-title fs-5 text-primary" id="modalFokus1Label">1. [Daya berdaya SAKTI]</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body border-0">
+                    <p>Semakin meningkatnya jumlah anak jalanan yang berlokasi di
+                        perempatan jalan pertigaanjalan dan terminal bus maupun angkot. Mereka
+                        masih berusia anak anak dan belum saatnya bekerja. Munculnya anak
+                        jalanan di sektor tersebut disebabkan tuntutan ekonomi keluarga yang
+                        dalam kondisi miskin dan sulitnya mendapatkan pekerjaan karena belum
+                        memiliki keterampilan sehingga mereka memilih bekerja di jalanan karena
+                        sektor tersebut yang dapat menerima mereka.</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary btn-sm rounded-4" data-bs-dismiss="modal">
+                        <i class="fas fa-times"></i> Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalFokus3" tabindex="-1" aria-labelledby="modalFokus3Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-4">
+                <div class="modal-header border-0">
+                    <h1 class="modal-title fs-5 text-primary" id="modalFokus3Label">3. [Daya Tumbuh SAKTI]</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body border-0">
+                    <p>Laju pertumbuhan ekonomi Kota Blitar 2017 2021 (data terbaru BPS)
+                        4,28% di bawah pertumbuhan ekonomi nasional di tahun 2022 sebesar
+                        5,31%.</p>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary btn-sm rounded-4" data-bs-dismiss="modal">
+                        <i class="fas fa-times"></i> Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalFokus4" tabindex="-1" aria-labelledby="modalFokus4Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-4">
+                <div class="modal-header border-0">
+                    <h1 class="modal-title fs-5 text-primary" id="modalFokus4Label">4. [Daya Inklusif dan kolaborasi
+                        SAKTI]</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body border-0">
+                    <p>
+                        Daya layan fasilitas pendidikan tingkat SD sederajat di tiap kecamatan Kota Blitar yaitu Kecamatan
+                        Sukorejo, Kepanjenkidul, dan Sananwetan memiliki tingkat pelayanan defisit. Hal ini disebabkan
+                        karena jumlah fasilitas SD sederajat yang tersedia belum mampu mendukung kebutuhan penduduk, daya
+                        layan fasilitas pendidikan tingkat SMP sederajat di Kota Blitar yang memiliki tingkat pelayanan
+                        surplus hanya di Kecamatan Kepanjenkidul karena sudah mampu mendukung kebutuhan penduduk dan masih
+                        kelebihan 1 unit SMP sederajat, sedangkan fasilitas pendidikan SMP sederajat di Kecamatan Sukorejo
+                        dan Sananwetan memiliki tingkat pelayanan defisit karena masih belum mampu mendukung kebutuhan
+                        penduduk. Untuk pendidikan tingkat SMA menjadi wilayah kewenangan Pemerintah Kota Blitar Provinsi
+                        Jawa Timur. Kota Blitar masih kekurangan sejumlah fasilitas olahraga untuk latihan atlet.
+                    </p>
+
+                    <h6>MANIFESTO DAYA GERAK DAN LAYANAN</h6>
+
+                    <ul>
+                        <li class="mb-1">Mendorong pembentukan kebijakan yang mendukung pendirian pusat pelatihan
+                            kejuruan untuk pemuda.</li>
+                        <li class="mb-1">Menyusun program pelatihan yang sesuai dengan kebutuhan pasar tenaga kerja
+                            lokal.</li>
+                        <li class="mb-1">Memberikan insentif pajak atau bantuan kepada perusahaan yang berpartisipasi
+                            dalam pelatihan pemuda.</li>
+                        <li class="mb-1">Mendorong pertumbuhan Ekonomi lokal berbasis Ekonomi Kreatif.</li>
+                        <li class="mb-1">Membuat kebijakan dan regulasi yang mendukung pengembangan ekonomi lokal.</li>
+                        <li class="mb-1">Mengoptimalkan peran Pemerintah Kota Blitar dalam mendukung inisiatif dan
+                            program pertumbuhan ekonomi.</li>
+                        <li class="mb-1">Membangun kemitraan yang kuat dengan pihak swasta untuk mendorong investasi dan
+                            inovasi.</li>
+                        <li class="mb-1">Melibatkan perusahaan swasta dalam program pembangunan ekonomi lokal.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary btn-sm rounded-4" data-bs-dismiss="modal">
+                        <i class="fas fa-times"></i> Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalFokus2" tabindex="-1" aria-labelledby="modalFokus2Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-4">
+                <div class="modal-header border-0">
+                    <h1 class="modal-title fs-5 text-primary" id="modalFokus2Label">2. [Daya kembang SAKTI]</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body border-0">
+                    <p>Tingkat Pengangguran Terbuka (TPT) Kota Blitar di Tahun 2022</p>
+                    <p>Sebesar 5,39%, selisih 0,44% lebih rendah dibandingkan dengan TPT rata-rata di Indonesia. Hal ini
+                        menunjukkan Tingkat pengangguran terbuka di Kota Blitar masih cukup tinggi di atas 5%.</p>
+                    <p>Berdasarkan data di atas, untuk mengatasi masalah ini, pemerintah Kota Blitar menargetkan angka
+                        pengangguran menjadi 5,22% pada tahun 2023.</p>
+                    <p>Beberapa langkah yang diambil bisa dengan mendorong diversifikasi ekonomi dan fokus pada
+                        sektor-sektor yang memiliki potensi pertumbuhan meliputi:</p>
+                    <ul>
+                        <li style="list-style-type:none;" class="mb-1"> <b>A.Pariwisata:</b> Sektor ini menjanjikan
+                            pendapatan
+                            tetap dan juga
+                            menciptakan pekerjaan sementara
+                            berkelanjutan.</li>
+                        <li style="list-style-type:none;" class="mb-1"> <b>B.Pertanian Modern:</b> Sektor ini dapat
+                            meningkatkan
+                            produktivitas
+                            dan pendapatan peternakan,
+                            sehingga memberikan dampak positif pada pengangguran.</li>
+                        <li style="list-style-type:none;" class="mb-1"> <b>C.Industri Kreatif:</b> Sektor ini melibatkan
+                            kegiatan seperti
+                            desain, produksi, dan penjualan
+                            produk kreatif, yang dapat membantu menciptakan pekerjaan dan pendapatan tambahan.</li>
+                    </ul>
+                    <p>Sedangkan dalam upaya mendorong tumbuhnya minat Masyarakat untuk menjalankan bisnis UMKM. Beberapa
+                        langkah yang diambil bisa dengan mendorong program pembinaan dan pendampingan bagi usaha mikro,
+                        kecil, dan menengah (UMKM) meliputi:</p>
+                    <ul>
+                        <li style="list-style-type:none;" class="mb-1"><b>A. Pengembangan Infrastruktur:</b>
+                            Mengembangkan
+                            infrastruktur yang
+                            mendukung pertumbuhan usaha,
+                            seperti jalur pengangkutan, fasilitas pendidikan, dan infrastruktur pemborongan.</li>
+                        <li style="list-style-type:none;" class="mb-1"><b>B. Pelatihan dan Pengembangan Sumber Daya
+                                Manusia:</b> Mendorong
+                            pelatihan dan pengembangan sumber
+                            daya manusia untuk UMKM, seperti kursus pengempreneuran, manajemen perusahaan, dan pengembangan
+                            keterampilan kerja.</li>
+                        <li style="list-style-type:none;" class="mb-1"><b>C. Pemborongan Usaha:</b> Mendorong
+                            pemborongan usaha
+                            baru dan
+                            meningkatkan daya saing UMKM yang
+                            ada, terutama dalam sektor pariwisata, pertanian modern, dan industri kreatif.</li>
+                        <li style="list-style-type:none;" class="mb-1"><b>D. Pengadaan Dana:</b> Menyediakan dana
+                            pendampingan
+                            untuk UMKM,
+                            seperti subsidi, soft loan, dan
+                            fasilitas kredit.</li>
+                        <li style="list-style-type:none;" class="mb-1"><b>E. Pengurangan Beban Biaya:</b> Mengurangi
+                            beban
+                            biaya yang dihadapi
+                            UMKM, seperti pengurangan biaya
+                            energi, transportasi, dan pengadaan.</li>
+                        <li style="list-style-type:none;" class="mb-1"><b>F. Pemasaran Produk:</b> Membantu UMKM
+                            meningkatkan
+                            pemasaran produk
+                            mereka, terutama kepada pasar
+                            lokal, regional, dan internasional.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary btn-sm rounded-4" data-bs-dismiss="modal">
+                        <i class="fas fa-times"></i> Tutup
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
-
-<!-- Modal -->
-<div class="modal fade" id="modalFokus1" tabindex="-1" aria-labelledby="modalFokus1Label" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content rounded-4">
-            <div class="modal-header border-0">
-                <h1 class="modal-title fs-5 text-primary" id="modalFokus1Label">1. [Daya berdaya SAKTI]</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body border-0">
-                <p>Semakin meningkatnya jumlah anak jalanan yang berlokasi di
-                    perempatan jalan pertigaanjalan dan terminal bus maupun angkot. Mereka
-                    masih berusia anak anak dan belum saatnya bekerja. Munculnya anak
-                    jalanan di sektor tersebut disebabkan tuntutan ekonomi keluarga yang
-                    dalam kondisi miskin dan sulitnya mendapatkan pekerjaan karena belum
-                    memiliki keterampilan sehingga mereka memilih bekerja di jalanan karena
-                    sektor tersebut yang dapat menerima mereka.</p>
-            </div>
-            <div class="modal-footer border-0">
-                <button type="button" class="btn btn-secondary btn-sm rounded-4" data-bs-dismiss="modal">
-                    <i class="fas fa-times"></i> Tutup
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="modalFokus3" tabindex="-1" aria-labelledby="modalFokus3Label" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content rounded-4">
-            <div class="modal-header border-0">
-                <h1 class="modal-title fs-5 text-primary" id="modalFokus3Label">3. [Daya Tumbuh SAKTI]</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body border-0">
-                <p>Laju pertumbuhan ekonomi Kota Blitar 2017 2021 (data terbaru BPS)
-                    4,28% di bawah pertumbuhan ekonomi nasional di tahun 2022 sebesar
-                    5,31%.</p>
-            </div>
-            <div class="modal-footer border-0">
-                <button type="button" class="btn btn-secondary btn-sm rounded-4" data-bs-dismiss="modal">
-                    <i class="fas fa-times"></i> Tutup
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="modalFokus4" tabindex="-1" aria-labelledby="modalFokus4Label" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content rounded-4">
-            <div class="modal-header border-0">
-                <h1 class="modal-title fs-5 text-primary" id="modalFokus4Label">4. [Daya Inklusif dan kolaborasi
-                    SAKTI]</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body border-0">
-                <p>
-                    Daya layan fasilitas pendidikan tingkat SD sederajat di tiap kecamatan Kota Blitar yaitu Kecamatan
-                    Sukorejo, Kepanjenkidul, dan Sananwetan memiliki tingkat pelayanan defisit. Hal ini disebabkan
-                    karena jumlah fasilitas SD sederajat yang tersedia belum mampu mendukung kebutuhan penduduk, daya
-                    layan fasilitas pendidikan tingkat SMP sederajat di Kota Blitar yang memiliki tingkat pelayanan
-                    surplus hanya di Kecamatan Kepanjenkidul karena sudah mampu mendukung kebutuhan penduduk dan masih
-                    kelebihan 1 unit SMP sederajat, sedangkan fasilitas pendidikan SMP sederajat di Kecamatan Sukorejo
-                    dan Sananwetan memiliki tingkat pelayanan defisit karena masih belum mampu mendukung kebutuhan
-                    penduduk. Untuk pendidikan tingkat SMA menjadi wilayah kewenangan Pemerintah Kota Blitar Provinsi
-                    Jawa Timur. Kota Blitar masih kekurangan sejumlah fasilitas olahraga untuk latihan atlet.
-                </p>
-
-                <h6>MANIFESTO DAYA GERAK DAN LAYANAN</h6>
-
-                <ul>
-                    <li class="mb-1">Mendorong pembentukan kebijakan yang mendukung pendirian pusat pelatihan
-                        kejuruan untuk pemuda.</li>
-                    <li class="mb-1">Menyusun program pelatihan yang sesuai dengan kebutuhan pasar tenaga kerja
-                        lokal.</li>
-                    <li class="mb-1">Memberikan insentif pajak atau bantuan kepada perusahaan yang berpartisipasi
-                        dalam pelatihan pemuda.</li>
-                    <li class="mb-1">Mendorong pertumbuhan Ekonomi lokal berbasis Ekonomi Kreatif.</li>
-                    <li class="mb-1">Membuat kebijakan dan regulasi yang mendukung pengembangan ekonomi lokal.</li>
-                    <li class="mb-1">Mengoptimalkan peran Pemerintah Kota Blitar dalam mendukung inisiatif dan
-                        program pertumbuhan ekonomi.</li>
-                    <li class="mb-1">Membangun kemitraan yang kuat dengan pihak swasta untuk mendorong investasi dan
-                        inovasi.</li>
-                    <li class="mb-1">Melibatkan perusahaan swasta dalam program pembangunan ekonomi lokal.</li>
-                </ul>
-            </div>
-            <div class="modal-footer border-0">
-                <button type="button" class="btn btn-secondary btn-sm rounded-4" data-bs-dismiss="modal">
-                    <i class="fas fa-times"></i> Tutup
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="modalFokus2" tabindex="-1" aria-labelledby="modalFokus2Label" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content rounded-4">
-            <div class="modal-header border-0">
-                <h1 class="modal-title fs-5 text-primary" id="modalFokus2Label">2. [Daya kembang SAKTI]</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body border-0">
-                <p>Tingkat Pengangguran Terbuka (TPT) Kota Blitar di Tahun 2022</p>
-                <p>Sebesar 5,39%, selisih 0,44% lebih rendah dibandingkan dengan TPT rata-rata di Indonesia. Hal ini
-                    menunjukkan Tingkat pengangguran terbuka di Kota Blitar masih cukup tinggi di atas 5%.</p>
-                <p>Berdasarkan data di atas, untuk mengatasi masalah ini, pemerintah Kota Blitar menargetkan angka
-                    pengangguran menjadi 5,22% pada tahun 2023.</p>
-                <p>Beberapa langkah yang diambil bisa dengan mendorong diversifikasi ekonomi dan fokus pada
-                    sektor-sektor yang memiliki potensi pertumbuhan meliputi:</p>
-                <ul>
-                    <li style="list-style-type:none;" class="mb-1"> <b>A.Pariwisata:</b> Sektor ini menjanjikan
-                        pendapatan
-                        tetap dan juga
-                        menciptakan pekerjaan sementara
-                        berkelanjutan.</li>
-                    <li style="list-style-type:none;" class="mb-1"> <b>B.Pertanian Modern:</b> Sektor ini dapat
-                        meningkatkan
-                        produktivitas
-                        dan pendapatan peternakan,
-                        sehingga memberikan dampak positif pada pengangguran.</li>
-                    <li style="list-style-type:none;" class="mb-1"> <b>C.Industri Kreatif:</b> Sektor ini melibatkan
-                        kegiatan seperti
-                        desain, produksi, dan penjualan
-                        produk kreatif, yang dapat membantu menciptakan pekerjaan dan pendapatan tambahan.</li>
-                </ul>
-                <p>Sedangkan dalam upaya mendorong tumbuhnya minat Masyarakat untuk menjalankan bisnis UMKM. Beberapa
-                    langkah yang diambil bisa dengan mendorong program pembinaan dan pendampingan bagi usaha mikro,
-                    kecil, dan menengah (UMKM) meliputi:</p>
-                <ul>
-                    <li style="list-style-type:none;" class="mb-1"><b>A. Pengembangan Infrastruktur:</b>
-                        Mengembangkan
-                        infrastruktur yang
-                        mendukung pertumbuhan usaha,
-                        seperti jalur pengangkutan, fasilitas pendidikan, dan infrastruktur pemborongan.</li>
-                    <li style="list-style-type:none;" class="mb-1"><b>B. Pelatihan dan Pengembangan Sumber Daya
-                            Manusia:</b> Mendorong
-                        pelatihan dan pengembangan sumber
-                        daya manusia untuk UMKM, seperti kursus pengempreneuran, manajemen perusahaan, dan pengembangan
-                        keterampilan kerja.</li>
-                    <li style="list-style-type:none;" class="mb-1"><b>C. Pemborongan Usaha:</b> Mendorong
-                        pemborongan usaha
-                        baru dan
-                        meningkatkan daya saing UMKM yang
-                        ada, terutama dalam sektor pariwisata, pertanian modern, dan industri kreatif.</li>
-                    <li style="list-style-type:none;" class="mb-1"><b>D. Pengadaan Dana:</b> Menyediakan dana
-                        pendampingan
-                        untuk UMKM,
-                        seperti subsidi, soft loan, dan
-                        fasilitas kredit.</li>
-                    <li style="list-style-type:none;" class="mb-1"><b>E. Pengurangan Beban Biaya:</b> Mengurangi
-                        beban
-                        biaya yang dihadapi
-                        UMKM, seperti pengurangan biaya
-                        energi, transportasi, dan pengadaan.</li>
-                    <li style="list-style-type:none;" class="mb-1"><b>F. Pemasaran Produk:</b> Membantu UMKM
-                        meningkatkan
-                        pemasaran produk
-                        mereka, terutama kepada pasar
-                        lokal, regional, dan internasional.</li>
-                </ul>
-            </div>
-            <div class="modal-footer border-0">
-                <button type="button" class="btn btn-secondary btn-sm rounded-4" data-bs-dismiss="modal">
-                    <i class="fas fa-times"></i> Tutup
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
