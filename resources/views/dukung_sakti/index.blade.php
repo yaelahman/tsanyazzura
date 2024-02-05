@@ -56,7 +56,7 @@
                             @foreach ($dukung_sakti as $index => $row)
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
-                                    <td>{{ $row->nik }}</td>
+                                    <td><span class="text-white">'</span> {{ $row->nik }}</td>
                                     <td>{{ $row->nama }}</td>
                                     <td>{{ $row->whatsapp }}</td>
                                     <td>{{ $row->jenis_kelamin == 'L' ? 'Laki Laki' : 'Perempuan' }}</td>
@@ -97,6 +97,11 @@
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
     <script type="text/javascript">
+        function convertToString(value) {
+            // Implement your custom logic to convert the value to a string
+            // For example, you can force conversion to string or apply any specific formatting
+            return String(value);
+        }
         $(document).ready(function() {
             $('#example').DataTable({
                 dom: 'Bfrtip',
@@ -105,7 +110,11 @@
                     title: 'Data Pendukung Raihan Tsany',
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-                    }
+                    },
+                    // customize: function(xlsx) {
+                    //     var sheet = xlsx.xl.worksheets['sheet1.xml'];
+                    //     $('row c', sheet).attr('s', '0')
+                    // }
                 }]
             });
             $('.buttons-excel').addClass('btn btn-success').html('Download Excel')
